@@ -134,3 +134,17 @@ D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\refint\PRN211_Project_Group1.dll
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.pdb
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.genruntimeconfig.cache
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\ref\PRN211_Project_Group1.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Security.Permissions.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Windows.Extensions.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
