@@ -234,7 +234,6 @@
             this.radioByName.Name = "radioByName";
             this.radioByName.Size = new System.Drawing.Size(73, 19);
             this.radioByName.TabIndex = 23;
-            this.radioByName.TabStop = true;
             this.radioByName.Text = "By Name";
             this.radioByName.UseVisualStyleBackColor = true;
             // 
@@ -248,36 +247,30 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(326, 47);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(67, 19);
             this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "By Price";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(405, 22);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(87, 19);
             this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "By Quantity";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
             this.radioButton3.Location = new System.Drawing.Point(405, 47);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(85, 19);
             this.radioButton3.TabIndex = 26;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "By Provider";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
