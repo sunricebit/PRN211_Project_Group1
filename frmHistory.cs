@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class frmLogin : Form
+    public partial class frmHistory : Form
     {
-        public frmLogin()
+        public frmHistory()
         {
             InitializeComponent();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

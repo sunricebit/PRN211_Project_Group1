@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project
+namespace FurnitureWinApp
 {
-    public partial class frmLogin : Form
+    public partial class frmAccountManagement : Form
     {
-        public frmLogin()
+        public frmAccountManagement()
         {
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void frmAccountManagement_Load(object sender, EventArgs e)
         {
 
         }

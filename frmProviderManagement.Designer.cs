@@ -28,310 +28,310 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            grFilter = new GroupBox();
-            cboSearchCity = new ComboBox();
-            lbSearchCity = new Label();
-            cboCountry = new ComboBox();
-            lbSearchCountry = new Label();
-            grSearch = new GroupBox();
-            radioByName = new RadioButton();
-            radioByID = new RadioButton();
-            txtSearchValue = new TextBox();
-            btnSearch = new Button();
-            lbSearch = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
-            grFilter.SuspendLayout();
-            grSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.grFilter = new System.Windows.Forms.GroupBox();
+            this.cboAddress = new System.Windows.Forms.ComboBox();
+            this.lbSearchCity = new System.Windows.Forms.Label();
+            this.cboCountry = new System.Windows.Forms.ComboBox();
+            this.lbSearchCountry = new System.Windows.Forms.Label();
+            this.grSearch = new System.Windows.Forms.GroupBox();
+            this.radioByName = new System.Windows.Forms.RadioButton();
+            this.radioByID = new System.Windows.Forms.RadioButton();
+            this.txtSearchValue = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lbSearch = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtProviderName = new System.Windows.Forms.TextBox();
+            this.txtProviderID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvProvider = new System.Windows.Forms.DataGridView();
+            this.grFilter.SuspendLayout();
+            this.grSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).BeginInit();
+            this.SuspendLayout();
             // 
-            // button3
+            // btnDelete
             // 
-            button3.BackColor = SystemColors.Control;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(522, 165);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 42;
-            button3.Text = "DELETE";
-            button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Location = new System.Drawing.Point(457, 124);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 22);
+            this.btnDelete.TabIndex = 42;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnUpdate
             // 
-            button2.BackColor = SystemColors.Control;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(354, 165);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 41;
-            button2.Text = "UPDATE";
-            button2.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdate.Location = new System.Drawing.Point(310, 124);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(82, 22);
+            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnAdd
             // 
-            button1.BackColor = SystemColors.Control;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(182, 165);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 40;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdd.Location = new System.Drawing.Point(159, 124);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(82, 22);
+            this.btnAdd.TabIndex = 40;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // grFilter
             // 
-            grFilter.Controls.Add(cboSearchCity);
-            grFilter.Controls.Add(lbSearchCity);
-            grFilter.Controls.Add(cboCountry);
-            grFilter.Controls.Add(lbSearchCountry);
-            grFilter.Location = new Point(473, 218);
-            grFilter.Margin = new Padding(3, 4, 3, 4);
-            grFilter.Name = "grFilter";
-            grFilter.Padding = new Padding(3, 4, 3, 4);
-            grFilter.Size = new Size(297, 112);
-            grFilter.TabIndex = 39;
-            grFilter.TabStop = false;
-            grFilter.Text = "Filter";
+            this.grFilter.Controls.Add(this.cboAddress);
+            this.grFilter.Controls.Add(this.lbSearchCity);
+            this.grFilter.Controls.Add(this.cboCountry);
+            this.grFilter.Controls.Add(this.lbSearchCountry);
+            this.grFilter.Location = new System.Drawing.Point(414, 164);
+            this.grFilter.Name = "grFilter";
+            this.grFilter.Size = new System.Drawing.Size(260, 84);
+            this.grFilter.TabIndex = 39;
+            this.grFilter.TabStop = false;
+            this.grFilter.Text = "Filter";
             // 
-            // cboSearchCity
+            // cboAddress
             // 
-            cboSearchCity.Location = new Point(88, 73);
-            cboSearchCity.Margin = new Padding(3, 4, 3, 4);
-            cboSearchCity.Name = "cboSearchCity";
-            cboSearchCity.Size = new Size(188, 28);
-            cboSearchCity.TabIndex = 20;
+            this.cboAddress.Location = new System.Drawing.Point(77, 55);
+            this.cboAddress.Name = "cboAddress";
+            this.cboAddress.Size = new System.Drawing.Size(165, 23);
+            this.cboAddress.TabIndex = 20;
             // 
             // lbSearchCity
             // 
-            lbSearchCity.AutoSize = true;
-            lbSearchCity.Location = new Point(22, 75);
-            lbSearchCity.Name = "lbSearchCity";
-            lbSearchCity.Size = new Size(62, 20);
-            lbSearchCity.TabIndex = 19;
-            lbSearchCity.Text = "Address";
+            this.lbSearchCity.AutoSize = true;
+            this.lbSearchCity.Location = new System.Drawing.Point(19, 56);
+            this.lbSearchCity.Name = "lbSearchCity";
+            this.lbSearchCity.Size = new System.Drawing.Size(49, 15);
+            this.lbSearchCity.TabIndex = 19;
+            this.lbSearchCity.Text = "Address";
             // 
             // cboCountry
             // 
-            cboCountry.Location = new Point(88, 27);
-            cboCountry.Margin = new Padding(3, 4, 3, 4);
-            cboCountry.Name = "cboCountry";
-            cboCountry.Size = new Size(188, 28);
-            cboCountry.TabIndex = 0;
+            this.cboCountry.Location = new System.Drawing.Point(77, 20);
+            this.cboCountry.Name = "cboCountry";
+            this.cboCountry.Size = new System.Drawing.Size(165, 23);
+            this.cboCountry.TabIndex = 0;
             // 
             // lbSearchCountry
             // 
-            lbSearchCountry.AutoSize = true;
-            lbSearchCountry.Location = new Point(22, 30);
-            lbSearchCountry.Name = "lbSearchCountry";
-            lbSearchCountry.Size = new Size(50, 20);
-            lbSearchCountry.TabIndex = 18;
-            lbSearchCountry.Text = "Phone";
+            this.lbSearchCountry.AutoSize = true;
+            this.lbSearchCountry.Location = new System.Drawing.Point(19, 22);
+            this.lbSearchCountry.Name = "lbSearchCountry";
+            this.lbSearchCountry.Size = new System.Drawing.Size(41, 15);
+            this.lbSearchCountry.TabIndex = 18;
+            this.lbSearchCountry.Text = "Phone";
             // 
             // grSearch
             // 
-            grSearch.Controls.Add(radioByName);
-            grSearch.Controls.Add(radioByID);
-            grSearch.Controls.Add(txtSearchValue);
-            grSearch.Controls.Add(btnSearch);
-            grSearch.Controls.Add(lbSearch);
-            grSearch.Location = new Point(60, 218);
-            grSearch.Margin = new Padding(3, 4, 3, 4);
-            grSearch.Name = "grSearch";
-            grSearch.Padding = new Padding(3, 4, 3, 4);
-            grSearch.Size = new Size(330, 119);
-            grSearch.TabIndex = 38;
-            grSearch.TabStop = false;
-            grSearch.Text = "Search";
+            this.grSearch.Controls.Add(this.radioByName);
+            this.grSearch.Controls.Add(this.radioByID);
+            this.grSearch.Controls.Add(this.txtSearchValue);
+            this.grSearch.Controls.Add(this.btnSearch);
+            this.grSearch.Controls.Add(this.lbSearch);
+            this.grSearch.Location = new System.Drawing.Point(52, 164);
+            this.grSearch.Name = "grSearch";
+            this.grSearch.Size = new System.Drawing.Size(302, 89);
+            this.grSearch.TabIndex = 38;
+            this.grSearch.TabStop = false;
+            this.grSearch.Text = "Search";
             // 
             // radioByName
             // 
-            radioByName.AutoSize = true;
-            radioByName.Checked = true;
-            radioByName.Location = new Point(240, 71);
-            radioByName.Margin = new Padding(3, 4, 3, 4);
-            radioByName.Name = "radioByName";
-            radioByName.Size = new Size(90, 24);
-            radioByName.TabIndex = 23;
-            radioByName.TabStop = true;
-            radioByName.Text = "By Name";
-            radioByName.UseVisualStyleBackColor = true;
+            this.radioByName.AutoSize = true;
+            this.radioByName.Checked = true;
+            this.radioByName.Location = new System.Drawing.Point(210, 53);
+            this.radioByName.Name = "radioByName";
+            this.radioByName.Size = new System.Drawing.Size(83, 19);
+            this.radioByName.TabIndex = 23;
+            this.radioByName.TabStop = true;
+            this.radioByName.Text = "By Address";
+            this.radioByName.UseVisualStyleBackColor = true;
             // 
             // radioByID
             // 
-            radioByID.AutoSize = true;
-            radioByID.Location = new Point(240, 31);
-            radioByID.Margin = new Padding(3, 4, 3, 4);
-            radioByID.Name = "radioByID";
-            radioByID.Size = new Size(65, 24);
-            radioByID.TabIndex = 22;
-            radioByID.TabStop = true;
-            radioByID.Text = "By ID";
-            radioByID.UseVisualStyleBackColor = true;
+            this.radioByID.AutoSize = true;
+            this.radioByID.Location = new System.Drawing.Point(210, 23);
+            this.radioByID.Name = "radioByID";
+            this.radioByID.Size = new System.Drawing.Size(73, 19);
+            this.radioByID.TabIndex = 22;
+            this.radioByID.TabStop = true;
+            this.radioByID.Text = "By Name";
+            this.radioByID.UseVisualStyleBackColor = true;
             // 
             // txtSearchValue
             // 
-            txtSearchValue.Location = new Point(82, 28);
-            txtSearchValue.Margin = new Padding(3, 4, 3, 4);
-            txtSearchValue.Name = "txtSearchValue";
-            txtSearchValue.Size = new Size(134, 27);
-            txtSearchValue.TabIndex = 17;
+            this.txtSearchValue.Location = new System.Drawing.Point(72, 21);
+            this.txtSearchValue.Name = "txtSearchValue";
+            this.txtSearchValue.Size = new System.Drawing.Size(118, 23);
+            this.txtSearchValue.TabIndex = 17;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(82, 69);
-            btnSearch.Margin = new Padding(3, 4, 3, 4);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(86, 31);
-            btnSearch.TabIndex = 21;
-            btnSearch.Text = "&Search";
-            btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(72, 52);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // lbSearch
             // 
-            lbSearch.AutoSize = true;
-            lbSearch.Location = new Point(27, 30);
-            lbSearch.Name = "lbSearch";
-            lbSearch.Size = new Size(53, 20);
-            lbSearch.TabIndex = 16;
-            lbSearch.Text = "Search";
+            this.lbSearch.AutoSize = true;
+            this.lbSearch.Location = new System.Drawing.Point(24, 22);
+            this.lbSearch.Name = "lbSearch";
+            this.lbSearch.Size = new System.Drawing.Size(42, 15);
+            this.lbSearch.TabIndex = 16;
+            this.lbSearch.Text = "Search";
             // 
-            // textBox4
+            // txtAddress
             // 
-            textBox4.Location = new Point(544, 96);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(235, 27);
-            textBox4.TabIndex = 37;
+            this.txtAddress.Location = new System.Drawing.Point(476, 72);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(206, 23);
+            this.txtAddress.TabIndex = 37;
             // 
-            // textBox3
+            // txtPhone
             // 
-            textBox3.Location = new Point(544, 25);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(235, 27);
-            textBox3.TabIndex = 36;
+            this.txtPhone.Location = new System.Drawing.Point(476, 19);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(206, 23);
+            this.txtPhone.TabIndex = 36;
             // 
-            // textBox2
+            // txtProviderName
             // 
-            textBox2.Location = new Point(180, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(235, 27);
-            textBox2.TabIndex = 35;
+            this.txtProviderName.Location = new System.Drawing.Point(158, 75);
+            this.txtProviderName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProviderName.Name = "txtProviderName";
+            this.txtProviderName.Size = new System.Drawing.Size(206, 23);
+            this.txtProviderName.TabIndex = 35;
             // 
-            // textBox1
+            // txtProviderID
             // 
-            textBox1.Location = new Point(182, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 27);
-            textBox1.TabIndex = 34;
+            this.txtProviderID.Location = new System.Drawing.Point(159, 19);
+            this.txtProviderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProviderID.Name = "txtProviderID";
+            this.txtProviderID.Size = new System.Drawing.Size(206, 23);
+            this.txtProviderID.TabIndex = 34;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.Control;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(464, 103);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 20);
-            label4.TabIndex = 33;
-            label4.Text = "Address:";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(406, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Address:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.Control;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(464, 28);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 20);
-            label3.TabIndex = 32;
-            label3.Text = "Phone:";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(406, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Phone:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(60, 103);
-            label2.Name = "label2";
-            label2.Size = new Size(118, 20);
-            label2.TabIndex = 31;
-            label2.Text = "Provider Name:";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(52, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 15);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Provider Name:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(60, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 20);
-            label1.TabIndex = 30;
-            label1.Text = "Provider ID:";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(52, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Provider ID:";
             // 
-            // dataGridView1
+            // dgvProvider
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(42, 374);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(759, 220);
-            dataGridView1.TabIndex = 29;
+            this.dgvProvider.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProvider.Location = new System.Drawing.Point(37, 280);
+            this.dgvProvider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProvider.Name = "dgvProvider";
+            this.dgvProvider.RowHeadersWidth = 51;
+            this.dgvProvider.RowTemplate.Height = 29;
+            this.dgvProvider.Size = new System.Drawing.Size(664, 165);
+            this.dgvProvider.TabIndex = 29;
             // 
             // frmProviderManagement
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(843, 619);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(grFilter);
-            Controls.Add(grSearch);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(dataGridView1);
-            Name = "frmProviderManagement";
-            Text = "frmProviderManagement";
-            grFilter.ResumeLayout(false);
-            grFilter.PerformLayout();
-            grSearch.ResumeLayout(false);
-            grSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(738, 464);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.grFilter);
+            this.Controls.Add(this.grSearch);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtProviderName);
+            this.Controls.Add(this.txtProviderID);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvProvider);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmProviderManagement";
+            this.Text = "Provider Management";
+            this.grFilter.ResumeLayout(false);
+            this.grFilter.PerformLayout();
+            this.grSearch.ResumeLayout(false);
+            this.grSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnDelete;
+        private Button btnUpdate;
+        private Button btnAdd;
         private GroupBox grFilter;
-        private ComboBox cboSearchCity;
+        private ComboBox cboAddress;
         private Label lbSearchCity;
         private ComboBox cboCountry;
         private Label lbSearchCountry;
@@ -341,14 +341,14 @@
         private TextBox txtSearchValue;
         private Button btnSearch;
         private Label lbSearch;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtAddress;
+        private TextBox txtPhone;
+        private TextBox txtProviderName;
+        private TextBox txtProviderID;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvProvider;
     }
 }

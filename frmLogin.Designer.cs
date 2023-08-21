@@ -1,4 +1,4 @@
-﻿namespace Project
+﻿namespace FurnitureWinApp
 {
     partial class frmLogin
     {
@@ -28,106 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            SuspendLayout();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.SuspendLayout();
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(222, 102);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(205, 23);
+            this.txtEmail.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(222, 154);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(205, 23);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(125, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(215, 31);
-            label1.TabIndex = 0;
-            label1.Text = "FURNITURE STORE";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(117, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Email";
             // 
-            // label2
+            // btnLogin
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(36, 85);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Username:";
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(157, 217);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(286, 217);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(41, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Password:";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Snap ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(16, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(502, 35);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Furniture Storage Management";
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(0, 192, 0);
-            label4.Location = new Point(150, 236);
-            label4.Name = "label4";
-            label4.Size = new Size(134, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Forgot password?";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(117, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Password";
             // 
-            // button1
+            // linkLabel1
             // 
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(172, 295);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 4;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(125, 82);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(252, 27);
-            textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(125, 162);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(252, 27);
-            textBox2.TabIndex = 6;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(215, 262);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(98, 15);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "forgot password?";
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 387);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "frmLogin";
-            Text = "frmLogin";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(539, 298);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
+            this.Name = "frmLogin";
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
+        private TextBox txtEmail;
+        private TextBox txtPassword;
         private Label label1;
-        private Label label2;
+        private Button btnLogin;
+        private Button btnClose;
         private Label label3;
-        private Label label4;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Label label2;
+        private LinkLabel linkLabel1;
     }
 }
