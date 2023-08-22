@@ -46,5 +46,10 @@ namespace Project
         {
 
         }
+
+        private void frmProviderManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace NES_Store
         {
 
         }
+
+        private void ResetPassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -374,6 +374,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmProviderManagement";
             Text = "Provider Management";
+            Load += frmProviderManagement_Load;
             grSearch.ResumeLayout(false);
             grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProvider).EndInit();

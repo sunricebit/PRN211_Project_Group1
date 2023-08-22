@@ -152,6 +152,7 @@
             Controls.Add(label1);
             Name = "ResetPassword";
             Text = "ResetPassword";
+            Load += ResetPassword_Load;
             gbPass.ResumeLayout(false);
             gbPass.PerformLayout();
             ResumeLayout(false);

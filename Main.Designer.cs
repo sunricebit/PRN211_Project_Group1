@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtLabel = new Label();
+            labelname = new Label();
             btnProducts = new Button();
             btnCategories = new Button();
             btnProvider = new Button();
@@ -39,14 +39,14 @@
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // txtLabel
+            // labelname
             // 
-            txtLabel.AutoSize = true;
-            txtLabel.Location = new Point(190, 25);
-            txtLabel.Name = "txtLabel";
-            txtLabel.Size = new Size(38, 15);
-            txtLabel.TabIndex = 0;
-            txtLabel.Text = "label1";
+            labelname.AutoSize = true;
+            labelname.Location = new Point(190, 25);
+            labelname.Name = "labelname";
+            labelname.Size = new Size(38, 15);
+            labelname.TabIndex = 0;
+            labelname.Text = "label1";
             // 
             // btnProducts
             // 
@@ -128,7 +128,7 @@
             Controls.Add(btnProvider);
             Controls.Add(btnCategories);
             Controls.Add(btnProducts);
-            Controls.Add(txtLabel);
+            Controls.Add(labelname);
             Controls.Add(groupBox1);
             Name = "Main";
             Text = "Main";
@@ -140,7 +140,7 @@
 
         #endregion
 
-        private Label txtLabel;
+        private Label labelname;
         private Button btnProducts;
         private Button btnCategories;
         private Button btnProvider;

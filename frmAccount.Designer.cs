@@ -201,6 +201,7 @@
             Controls.Add(btnSave);
             Name = "frmAccount";
             Text = "Account";
+            Load += frmAccount_Load;
             ResumeLayout(false);
             PerformLayout();
         }

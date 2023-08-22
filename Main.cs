@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRN211_Project_Group1.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace PRN211_Project_Group1
 {
     public partial class Main : Form
     {
-        public Main()
+        public Account account1 { get; set; }
+        public frmLogin frm;
+        public Main(frmLogin frmLogin, Account account)
         {
             InitializeComponent();
+            this.account1 = account;
+            this.frm = frmLogin;
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -49,7 +54,11 @@ namespace PRN211_Project_Group1
 
         private void Main_Load(object sender, EventArgs e)
         {
-
+            labelname.Text = $"Welcome, {account1.Username}! Please choose what you want to do.";
+            if (!account1.Role.Equals("Admin"))
+            {
+                btnAdmin.Enabled = false;
+            }
         }
     }
 }
