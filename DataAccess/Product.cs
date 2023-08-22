@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace PRN211_Project_Group1.DataAccess;
 
@@ -16,10 +17,10 @@ public partial class Product
     public int? CategoryId { get; set; }
 
     public int? ProviderId { get; set; }
-
+    [Browsable(false)]
     public virtual Category? Category { get; set; }
-
+    [Browsable(false)]
     public virtual ICollection<History> Histories { get; set; } = new List<History>();
-
+    [Browsable(false)]
     public virtual Provider? Provider { get; set; }
 }
