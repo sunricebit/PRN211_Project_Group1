@@ -27,16 +27,18 @@ namespace PRN211_Project_Group1
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             var account = context.Accounts.FirstOrDefault(a => a.Username == username && a.Password == password);
-            if(account != null)
+            if (account != null)
             {
+                txtPassword.Clear();
+                txtUsername.Clear();
                 Main main = new Main(this, account);
                 main.Show();
                 this.Hide();
             }
             else
             {
-                txtPassword.DataBindings.Clear();
-                txtUsername.DataBindings.Clear();
+                txtPassword.Clear();
+                txtUsername.Clear();
                 label4.Text = "Incorect username or password";
                 label4.ForeColor = Color.Red;
                 label4.Show();

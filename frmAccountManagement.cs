@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataAccess;
+using PRN211_Project_Group1.DataAccess;
+using PRN211_Project_Group1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,15 @@ namespace FurnitureWinApp
 {
     public partial class frmAccountManagement : Form
     {
-        public frmAccountManagement()
+        InteriorProductManagementContext context = new InteriorProductManagementContext();
+        AccountRepository accountRepository = new AccountRepository();
+        public Account account { get; set; }
+        frmLogin frm;
+        public frmAccountManagement(Account acc, frmLogin login)
         {
             InitializeComponent();
+            this.account = acc;
+            this.frm = login;
         }
 
         private void frmAccountManagement_Load(object sender, EventArgs e)

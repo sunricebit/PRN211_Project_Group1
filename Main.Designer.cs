@@ -36,13 +36,15 @@
             btnAdmin = new Button();
             groupBox1 = new GroupBox();
             btnLogout = new Button();
+            grOther = new GroupBox();
             groupBox1.SuspendLayout();
+            grOther.SuspendLayout();
             SuspendLayout();
             // 
             // labelname
             // 
             labelname.AutoSize = true;
-            labelname.Location = new Point(190, 25);
+            labelname.Location = new Point(64, 32);
             labelname.Name = "labelname";
             labelname.Size = new Size(38, 15);
             labelname.TabIndex = 0;
@@ -50,7 +52,7 @@
             // 
             // btnProducts
             // 
-            btnProducts.Location = new Point(80, 82);
+            btnProducts.Location = new Point(16, 22);
             btnProducts.Name = "btnProducts";
             btnProducts.Size = new Size(121, 37);
             btnProducts.TabIndex = 1;
@@ -60,7 +62,7 @@
             // 
             // btnCategories
             // 
-            btnCategories.Location = new Point(80, 134);
+            btnCategories.Location = new Point(16, 73);
             btnCategories.Name = "btnCategories";
             btnCategories.Size = new Size(121, 37);
             btnCategories.TabIndex = 2;
@@ -70,7 +72,7 @@
             // 
             // btnProvider
             // 
-            btnProvider.Location = new Point(212, 82);
+            btnProvider.Location = new Point(148, 22);
             btnProvider.Name = "btnProvider";
             btnProvider.Size = new Size(121, 37);
             btnProvider.TabIndex = 3;
@@ -80,7 +82,7 @@
             // 
             // btnHistory
             // 
-            btnHistory.Location = new Point(212, 134);
+            btnHistory.Location = new Point(148, 73);
             btnHistory.Name = "btnHistory";
             btnHistory.Size = new Size(121, 37);
             btnHistory.TabIndex = 4;
@@ -118,22 +120,34 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
+            // grOther
+            // 
+            grOther.Controls.Add(btnProvider);
+            grOther.Controls.Add(btnCategories);
+            grOther.Controls.Add(btnHistory);
+            grOther.Controls.Add(btnProducts);
+            grOther.Location = new Point(64, 61);
+            grOther.Name = "grOther";
+            grOther.Size = new Size(298, 122);
+            grOther.TabIndex = 9;
+            grOther.TabStop = false;
+            grOther.Text = "Manager/Member Only";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(405, 322);
             Controls.Add(btnLogout);
-            Controls.Add(btnHistory);
-            Controls.Add(btnProvider);
-            Controls.Add(btnCategories);
-            Controls.Add(btnProducts);
             Controls.Add(labelname);
             Controls.Add(groupBox1);
+            Controls.Add(grOther);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             Load += Main_Load;
             groupBox1.ResumeLayout(false);
+            grOther.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,5 +162,6 @@
         private Button btnAdmin;
         private GroupBox groupBox1;
         private Button btnLogout;
+        private GroupBox grOther;
     }
 }

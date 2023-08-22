@@ -129,9 +129,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(252, 73);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(179, 72);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(40, 15);
             label4.TabIndex = 18;
             label4.Text = "label4";
             // 
@@ -150,6 +151,7 @@
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             Load += frmLogin_Load;
             ResumeLayout(false);

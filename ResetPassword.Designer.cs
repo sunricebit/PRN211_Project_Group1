@@ -32,12 +32,14 @@
             txtMail = new TextBox();
             btnCheck = new Button();
             gbPass = new GroupBox();
+            lbconfirm = new Label();
             btnSave = new Button();
             txtConfirmPass = new TextBox();
             txtNewPass = new TextBox();
             label3 = new Label();
             label2 = new Label();
             btnBack = new Button();
+            lbcheck = new Label();
             gbPass.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,23 +73,30 @@
             // gbPass
             // 
             gbPass.BackColor = Color.Transparent;
+            gbPass.Controls.Add(lbconfirm);
             gbPass.Controls.Add(btnSave);
             gbPass.Controls.Add(txtConfirmPass);
             gbPass.Controls.Add(txtNewPass);
             gbPass.Controls.Add(label3);
             gbPass.Controls.Add(label2);
-            gbPass.Enabled = false;
-            gbPass.Location = new Point(13, 53);
+            gbPass.Location = new Point(12, 70);
             gbPass.Name = "gbPass";
-            gbPass.Size = new Size(400, 160);
+            gbPass.Size = new Size(400, 140);
             gbPass.TabIndex = 3;
             gbPass.TabStop = false;
             gbPass.Text = "New password";
             // 
+            // lbconfirm
+            // 
+            lbconfirm.AutoSize = true;
+            lbconfirm.Location = new Point(24, 108);
+            lbconfirm.Name = "lbconfirm";
+            lbconfirm.Size = new Size(0, 15);
+            lbconfirm.TabIndex = 7;
+            // 
             // btnSave
             // 
-            btnSave.Enabled = false;
-            btnSave.Location = new Point(298, 106);
+            btnSave.Location = new Point(294, 104);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 6;
@@ -97,16 +106,14 @@
             // 
             // txtConfirmPass
             // 
-            txtConfirmPass.Enabled = false;
-            txtConfirmPass.Location = new Point(198, 62);
+            txtConfirmPass.Location = new Point(194, 60);
             txtConfirmPass.Name = "txtConfirmPass";
             txtConfirmPass.Size = new Size(175, 23);
             txtConfirmPass.TabIndex = 5;
             // 
             // txtNewPass
             // 
-            txtNewPass.Enabled = false;
-            txtNewPass.Location = new Point(198, 28);
+            txtNewPass.Location = new Point(194, 26);
             txtNewPass.Name = "txtNewPass";
             txtNewPass.Size = new Size(175, 23);
             txtNewPass.TabIndex = 4;
@@ -114,7 +121,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(74, 65);
+            label3.Location = new Point(70, 63);
             label3.Name = "label3";
             label3.Size = new Size(107, 15);
             label3.TabIndex = 1;
@@ -123,7 +130,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(74, 31);
+            label2.Location = new Point(70, 29);
             label2.Name = "label2";
             label2.Size = new Size(87, 15);
             label2.TabIndex = 0;
@@ -139,18 +146,29 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // lbcheck
+            // 
+            lbcheck.AutoSize = true;
+            lbcheck.Location = new Point(13, 43);
+            lbcheck.Name = "lbcheck";
+            lbcheck.Size = new Size(239, 15);
+            lbcheck.TabIndex = 5;
+            lbcheck.Text = "Please enter your email for validation check.";
+            // 
             // ResetPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(424, 265);
+            Controls.Add(lbcheck);
             Controls.Add(btnBack);
             Controls.Add(gbPass);
             Controls.Add(btnCheck);
             Controls.Add(txtMail);
             Controls.Add(label1);
             Name = "ResetPassword";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ResetPassword";
             Load += ResetPassword_Load;
             gbPass.ResumeLayout(false);
@@ -171,5 +189,7 @@
         private Label label3;
         private Label label2;
         private Button btnBack;
+        private Label lbcheck;
+        private Label lbconfirm;
     }
 }

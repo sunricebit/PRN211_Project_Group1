@@ -14,6 +14,8 @@ namespace DataAccess
         public void AddProduct(Product Product);
         public void UpdateProduct(Product Product);
         public void RemoveProduct(int ProductID);
+        public Product GetProduct(int ProductID);
+        public Product GetProduct(string name);
         public IEnumerable<Product> SearchProduct(int id);
         public IEnumerable<Product> SearchProduct(string name);
         public IEnumerable<Product> SearchProductByCat(int id);

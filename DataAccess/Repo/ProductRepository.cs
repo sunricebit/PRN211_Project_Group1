@@ -11,6 +11,10 @@ namespace DataAccess
     public class ProductRepository : IProductRepository
     {
         public void AddProduct(Product Product) => ProductDAO.getInstance.AddProduct(Product);
+
+        public Product GetProduct(int ProductID) => ProductDAO.getInstance.GetProduct(ProductID);
+        public Product GetProduct(string name) => ProductDAO.getInstance.GetProduct(name);
+
         public IEnumerable<Product> GetProductList() => ProductDAO.getInstance.GetProductList();
         public void RemoveProduct(int ProductID) => ProductDAO.getInstance.RemoveProduct(ProductID);
 
