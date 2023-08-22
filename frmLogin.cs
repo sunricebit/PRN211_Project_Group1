@@ -31,5 +31,10 @@ namespace PRN211_Project_Group1
         {
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
     }
 }

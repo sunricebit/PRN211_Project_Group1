@@ -140,6 +140,7 @@
             Controls.Add(txtEmail);
             Name = "frmLogin";
             Text = "frmLogin";
+            Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
