@@ -28,147 +28,244 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCategoryId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btnUpdate = new Button();
+            label4 = new Label();
+            txtCategoryId = new TextBox();
+            label2 = new Label();
+            btnLoad = new Button();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            btnDelete = new Button();
+            btnAdd = new Button();
+            dataGridView = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            categoryNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            categoryBindingSource = new BindingSource(components);
+            grActions = new GroupBox();
+            comboBox1 = new ComboBox();
+            categoryBindingSource1 = new BindingSource(components);
+            rbName = new RadioButton();
+            rbId = new RadioButton();
+            grSearch = new GroupBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource).BeginInit();
+            grActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource1).BeginInit();
+            grSearch.SuspendLayout();
+            SuspendLayout();
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(499, 41);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(22, 23);
-            this.btnUpdate.TabIndex = 47;
-            this.btnUpdate.Text = "⇧";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.Location = new System.Drawing.Point(224, 12);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(195, 23);
-            this.txtCategoryName.TabIndex = 46;
+            btnUpdate.Location = new Point(481, 45);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(22, 23);
+            btnUpdate.TabIndex = 47;
+            btnUpdate.Text = "⇧";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(12, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 15);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Category name";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(6, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(88, 15);
+            label4.TabIndex = 45;
+            label4.Text = "Category name";
             // 
             // txtCategoryId
             // 
-            this.txtCategoryId.Location = new System.Drawing.Point(224, 41);
-            this.txtCategoryId.Name = "txtCategoryId";
-            this.txtCategoryId.Size = new System.Drawing.Size(195, 23);
-            this.txtCategoryId.TabIndex = 44;
+            txtCategoryId.Location = new Point(211, 16);
+            txtCategoryId.Name = "txtCategoryId";
+            txtCategoryId.Size = new Size(195, 23);
+            txtCategoryId.TabIndex = 44;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(12, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 15);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Category ID (Update/Delete only)";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(6, 48);
+            label2.Name = "label2";
+            label2.Size = new Size(182, 15);
+            label2.TabIndex = 43;
+            label2.Text = "Category ID (Update/Delete only)";
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(527, 41);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(22, 23);
-            this.btnLoad.TabIndex = 42;
-            this.btnLoad.Text = "↻";
-            this.btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Location = new Point(524, 49);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(22, 23);
+            btnLoad.TabIndex = 42;
+            btnLoad.Text = "↻";
+            btnLoad.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(40, 76);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(506, 23);
-            this.txtSearch.TabIndex = 41;
+            txtSearch.Location = new Point(50, 18);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(452, 23);
+            txtSearch.TabIndex = 41;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(12, 76);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(22, 20);
-            this.btnSearch.TabIndex = 40;
-            this.btnSearch.Text = "🔎";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(6, 18);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(22, 20);
+            btnSearch.TabIndex = 40;
+            btnSearch.Text = "🔎";
+            btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(471, 41);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(22, 23);
-            this.btnDelete.TabIndex = 39;
-            this.btnDelete.Text = "-";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(450, 45);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(22, 23);
+            btnDelete.TabIndex = 39;
+            btnDelete.Text = "-";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(443, 41);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(22, 23);
-            this.btnAdd.TabIndex = 38;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(422, 45);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(22, 23);
+            btnAdd.TabIndex = 38;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // dataGridView
             // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 118);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(531, 285);
-            this.dataGridView.TabIndex = 37;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AutoGenerateColumns = false;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, categoryNameDataGridViewTextBoxColumn, productsDataGridViewTextBoxColumn });
+            dataGridView.DataSource = categoryBindingSource;
+            dataGridView.Location = new Point(12, 153);
+            dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.RowHeadersWidth = 51;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(531, 250);
+            dataGridView.TabIndex = 37;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
+            categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            categoryNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productsDataGridViewTextBoxColumn
+            // 
+            productsDataGridViewTextBoxColumn.DataPropertyName = "Products";
+            productsDataGridViewTextBoxColumn.HeaderText = "Products";
+            productsDataGridViewTextBoxColumn.Name = "productsDataGridViewTextBoxColumn";
+            productsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryBindingSource
+            // 
+            categoryBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Category);
+            // 
+            // grActions
+            // 
+            grActions.Controls.Add(txtCategoryId);
+            grActions.Controls.Add(comboBox1);
+            grActions.Controls.Add(btnUpdate);
+            grActions.Controls.Add(label4);
+            grActions.Controls.Add(label2);
+            grActions.Controls.Add(btnAdd);
+            grActions.Controls.Add(btnDelete);
+            grActions.Location = new Point(12, 4);
+            grActions.Name = "grActions";
+            grActions.Size = new Size(509, 76);
+            grActions.TabIndex = 48;
+            grActions.TabStop = false;
+            grActions.Text = "Actions";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DataSource = categoryBindingSource1;
+            comboBox1.DisplayMember = "Id";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(211, 45);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(195, 23);
+            comboBox1.TabIndex = 48;
+            comboBox1.ValueMember = "Id";
+            // 
+            // categoryBindingSource1
+            // 
+            categoryBindingSource1.DataSource = typeof(PRN211_Project_Group1.DataAccess.Category);
+            // 
+            // rbName
+            // 
+            rbName.AutoSize = true;
+            rbName.Checked = true;
+            rbName.Location = new Point(6, 47);
+            rbName.Name = "rbName";
+            rbName.Size = new Size(57, 19);
+            rbName.TabIndex = 49;
+            rbName.TabStop = true;
+            rbName.Text = "Name";
+            rbName.UseVisualStyleBackColor = true;
+            // 
+            // rbId
+            // 
+            rbId.AutoSize = true;
+            rbId.Location = new Point(78, 47);
+            rbId.Name = "rbId";
+            rbId.Size = new Size(35, 19);
+            rbId.TabIndex = 50;
+            rbId.Text = "Id";
+            rbId.UseVisualStyleBackColor = true;
+            // 
+            // grSearch
+            // 
+            grSearch.Controls.Add(txtSearch);
+            grSearch.Controls.Add(rbId);
+            grSearch.Controls.Add(btnSearch);
+            grSearch.Controls.Add(rbName);
+            grSearch.Location = new Point(13, 78);
+            grSearch.Name = "grSearch";
+            grSearch.Size = new Size(508, 69);
+            grSearch.TabIndex = 52;
+            grSearch.TabStop = false;
+            grSearch.Text = "Search";
             // 
             // frmCategoryManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 421);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtCategoryName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCategoryId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView);
-            this.Name = "frmCategoryManagement";
-            this.Text = "Category Management";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(558, 421);
+            Controls.Add(btnLoad);
+            Controls.Add(dataGridView);
+            Controls.Add(grActions);
+            Controls.Add(grSearch);
+            Name = "frmCategoryManagement";
+            Text = "Category Management";
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource).EndInit();
+            grActions.ResumeLayout(false);
+            grActions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource1).EndInit();
+            grSearch.ResumeLayout(false);
+            grSearch.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnUpdate;
-        private TextBox txtCategoryName;
         private Label label4;
         private TextBox txtCategoryId;
         private Label label2;
@@ -178,5 +275,15 @@
         private Button btnDelete;
         private Button btnAdd;
         private DataGridView dataGridView;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productsDataGridViewTextBoxColumn;
+        private BindingSource categoryBindingSource;
+        private GroupBox grActions;
+        private ComboBox comboBox1;
+        private BindingSource categoryBindingSource1;
+        private RadioButton rbName;
+        private RadioButton rbId;
+        private GroupBox grSearch;
     }
 }

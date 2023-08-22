@@ -3869,19 +3869,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shitm\\.nuget\\packages\\": {}
+    "C:\\Users\\dange\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN211\\AS_PRN211\\PRN211_Project_Group1.csproj",
+      "projectUniqueName": "D:\\PRN211_Project_Group1\\PRN211_Project_Group1.csproj",
       "projectName": "PRN211_Project_Group1",
-      "projectPath": "D:\\PRN211\\AS_PRN211\\PRN211_Project_Group1.csproj",
-      "packagesPath": "C:\\Users\\shitm\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN211\\AS_PRN211\\obj\\",
+      "projectPath": "D:\\PRN211_Project_Group1\\PRN211_Project_Group1.csproj",
+      "packagesPath": "C:\\Users\\dange\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN211_Project_Group1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shitm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dange\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3949,7 +3949,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

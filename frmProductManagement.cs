@@ -16,5 +16,50 @@ namespace FurnitureWinApp
         {
             InitializeComponent();
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

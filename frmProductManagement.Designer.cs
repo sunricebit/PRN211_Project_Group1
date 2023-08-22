@@ -28,323 +28,449 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.Price = new System.Windows.Forms.Label();
-            this.txtProductName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtInStock = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCategoryId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.txtProductID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.grFilter = new System.Windows.Forms.GroupBox();
-            this.cboCountry = new System.Windows.Forms.ComboBox();
-            this.lbSearchCountry = new System.Windows.Forms.Label();
-            this.radioByName = new System.Windows.Forms.RadioButton();
-            this.txtSearchValue = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.grSearch = new System.Windows.Forms.GroupBox();
-            this.grFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.grSearch.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btnImport = new Button();
+            btnUpdate = new Button();
+            txtPrice = new TextBox();
+            Price = new Label();
+            txtProductName = new TextBox();
+            label4 = new Label();
+            txtInStock = new TextBox();
+            label3 = new Label();
+            txtCategoryId = new TextBox();
+            label2 = new Label();
+            btnLoad = new Button();
+            label1 = new Label();
+            btnDelete = new Button();
+            btnAdd = new Button();
+            btnExport = new Button();
+            grFilter = new GroupBox();
+            cboCountry = new ComboBox();
+            productBindingSource = new BindingSource(components);
+            lbSearchCountry = new Label();
+            rbByName = new RadioButton();
+            txtSearchValue = new TextBox();
+            rbByCatID = new RadioButton();
+            rbByProviderID = new RadioButton();
+            btnSearch = new Button();
+            dataGridView = new DataGridView();
+            grSearch = new GroupBox();
+            comboBox1 = new ComboBox();
+            grActions = new GroupBox();
+            btnClose = new Button();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            quantityDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            priceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            categoryIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            providerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            categoryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            historiesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            providerDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            rbByID = new RadioButton();
+            grFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            grSearch.SuspendLayout();
+            grActions.SuspendLayout();
+            SuspendLayout();
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(660, 42);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(84, 30);
-            this.btnImport.TabIndex = 36;
-            this.btnImport.Text = "Import data";
-            this.btnImport.UseVisualStyleBackColor = true;
+            btnImport.Location = new Point(527, 138);
+            btnImport.Name = "btnImport";
+            btnImport.Size = new Size(84, 30);
+            btnImport.TabIndex = 36;
+            btnImport.Text = "Import data";
+            btnImport.UseVisualStyleBackColor = true;
+            btnImport.Click += btnImport_Click;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(618, 132);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(36, 35);
-            this.btnUpdate.TabIndex = 35;
-            this.btnUpdate.Text = "⇧";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Location = new Point(670, 22);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(26, 23);
+            btnUpdate.TabIndex = 35;
+            btnUpdate.Text = "⇧";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(119, 44);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 23);
-            this.txtPrice.TabIndex = 34;
+            txtPrice.Location = new Point(119, 44);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(100, 23);
+            txtPrice.TabIndex = 34;
             // 
             // Price
             // 
-            this.Price.AutoSize = true;
-            this.Price.BackColor = System.Drawing.Color.Transparent;
-            this.Price.Location = new System.Drawing.Point(66, 46);
-            this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(33, 15);
-            this.Price.TabIndex = 33;
-            this.Price.Text = "Price";
+            Price.AutoSize = true;
+            Price.BackColor = Color.Transparent;
+            Price.Location = new Point(66, 46);
+            Price.Name = "Price";
+            Price.Size = new Size(33, 15);
+            Price.TabIndex = 33;
+            Price.Text = "Price";
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(119, 12);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(100, 23);
-            this.txtProductName.TabIndex = 32;
+            txtProductName.Location = new Point(119, 12);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(100, 23);
+            txtProductName.TabIndex = 32;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(13, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Product name";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(13, 14);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 15);
+            label4.TabIndex = 31;
+            label4.Text = "Product name";
             // 
             // txtInStock
             // 
-            this.txtInStock.Location = new System.Drawing.Point(312, 43);
-            this.txtInStock.Name = "txtInStock";
-            this.txtInStock.Size = new System.Drawing.Size(100, 23);
-            this.txtInStock.TabIndex = 30;
+            txtInStock.Location = new Point(312, 43);
+            txtInStock.Name = "txtInStock";
+            txtInStock.Size = new Size(100, 23);
+            txtInStock.TabIndex = 30;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(257, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 15);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "In stock";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(257, 46);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 15);
+            label3.TabIndex = 29;
+            label3.Text = "In stock";
             // 
             // txtCategoryId
             // 
-            this.txtCategoryId.Location = new System.Drawing.Point(312, 11);
-            this.txtCategoryId.Name = "txtCategoryId";
-            this.txtCategoryId.Size = new System.Drawing.Size(100, 23);
-            this.txtCategoryId.TabIndex = 28;
+            txtCategoryId.Location = new Point(312, 11);
+            txtCategoryId.Name = "txtCategoryId";
+            txtCategoryId.Size = new Size(100, 23);
+            txtCategoryId.TabIndex = 28;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(234, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Category ID ";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(234, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 15);
+            label2.TabIndex = 27;
+            label2.Text = "Category ID ";
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(660, 132);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(36, 35);
-            this.btnLoad.TabIndex = 26;
-            this.btnLoad.Text = "↻";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
-            // txtProductID
-            // 
-            this.txtProductID.Location = new System.Drawing.Point(476, 44);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(100, 23);
-            this.txtProductID.TabIndex = 23;
+            btnLoad.Location = new Point(708, 138);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(36, 30);
+            btnLoad.TabIndex = 26;
+            btnLoad.Text = "↻";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(435, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 15);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Product ID (Update/Delete only)";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(435, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(176, 15);
+            label1.TabIndex = 22;
+            label1.Text = "Product ID (Update/Delete only)";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(576, 132);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 35);
-            this.btnDelete.TabIndex = 21;
-            this.btnDelete.Text = "-";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(638, 22);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(26, 23);
+            btnDelete.TabIndex = 21;
+            btnDelete.Text = "-";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(534, 132);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(36, 35);
-            this.btnAdd.TabIndex = 20;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(606, 22);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(26, 23);
+            btnAdd.TabIndex = 20;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // button1
+            // btnExport
             // 
-            this.button1.Location = new System.Drawing.Point(660, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 30);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Export data";
-            this.button1.UseVisualStyleBackColor = true;
+            btnExport.Location = new Point(618, 138);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(84, 30);
+            btnExport.TabIndex = 38;
+            btnExport.Text = "Export data";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
             // 
             // grFilter
             // 
-            this.grFilter.Controls.Add(this.cboCountry);
-            this.grFilter.Controls.Add(this.lbSearchCountry);
-            this.grFilter.Location = new System.Drawing.Point(518, 73);
-            this.grFilter.Name = "grFilter";
-            this.grFilter.Size = new System.Drawing.Size(226, 50);
-            this.grFilter.TabIndex = 41;
-            this.grFilter.TabStop = false;
-            this.grFilter.Text = "Filter";
+            grFilter.Controls.Add(cboCountry);
+            grFilter.Controls.Add(lbSearchCountry);
+            grFilter.Location = new Point(518, 79);
+            grFilter.Name = "grFilter";
+            grFilter.Size = new Size(226, 53);
+            grFilter.TabIndex = 41;
+            grFilter.TabStop = false;
+            grFilter.Text = "Filter";
             // 
             // cboCountry
             // 
-            this.cboCountry.Location = new System.Drawing.Point(77, 20);
-            this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(133, 23);
-            this.cboCountry.TabIndex = 0;
+            cboCountry.DataSource = productBindingSource;
+            cboCountry.DisplayMember = "Category";
+            cboCountry.Location = new Point(77, 20);
+            cboCountry.Name = "cboCountry";
+            cboCountry.Size = new Size(133, 23);
+            cboCountry.TabIndex = 0;
+            cboCountry.ValueMember = "CategoryId";
+            cboCountry.SelectedIndexChanged += cboCountry_SelectedIndexChanged;
+            // 
+            // productBindingSource
+            // 
+            productBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Product);
             // 
             // lbSearchCountry
             // 
-            this.lbSearchCountry.AutoSize = true;
-            this.lbSearchCountry.Location = new System.Drawing.Point(19, 22);
-            this.lbSearchCountry.Name = "lbSearchCountry";
-            this.lbSearchCountry.Size = new System.Drawing.Size(55, 15);
-            this.lbSearchCountry.TabIndex = 18;
-            this.lbSearchCountry.Text = "Category";
+            lbSearchCountry.AutoSize = true;
+            lbSearchCountry.Location = new Point(19, 22);
+            lbSearchCountry.Name = "lbSearchCountry";
+            lbSearchCountry.Size = new Size(55, 15);
+            lbSearchCountry.TabIndex = 18;
+            lbSearchCountry.Text = "Category";
             // 
-            // radioByName
+            // rbByName
             // 
-            this.radioByName.AutoSize = true;
-            this.radioByName.Checked = true;
-            this.radioByName.Location = new System.Drawing.Point(326, 22);
-            this.radioByName.Name = "radioByName";
-            this.radioByName.Size = new System.Drawing.Size(73, 19);
-            this.radioByName.TabIndex = 23;
-            this.radioByName.Text = "By Name";
-            this.radioByName.UseVisualStyleBackColor = true;
+            rbByName.AutoSize = true;
+            rbByName.Checked = true;
+            rbByName.Location = new Point(326, 22);
+            rbByName.Name = "rbByName";
+            rbByName.Size = new Size(73, 19);
+            rbByName.TabIndex = 23;
+            rbByName.TabStop = true;
+            rbByName.Text = "By Name";
+            rbByName.UseVisualStyleBackColor = true;
             // 
             // txtSearchValue
             // 
-            this.txtSearchValue.Location = new System.Drawing.Point(38, 21);
-            this.txtSearchValue.Name = "txtSearchValue";
-            this.txtSearchValue.Size = new System.Drawing.Size(275, 23);
-            this.txtSearchValue.TabIndex = 17;
+            txtSearchValue.Location = new Point(38, 21);
+            txtSearchValue.Name = "txtSearchValue";
+            txtSearchValue.Size = new Size(275, 23);
+            txtSearchValue.TabIndex = 17;
             // 
-            // radioButton1
+            // rbByCatID
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(326, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 19);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.Text = "By Price";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            rbByCatID.AutoSize = true;
+            rbByCatID.Location = new Point(326, 47);
+            rbByCatID.Name = "rbByCatID";
+            rbByCatID.Size = new Size(70, 19);
+            rbByCatID.TabIndex = 24;
+            rbByCatID.Text = "By CatID";
+            rbByCatID.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbByProviderID
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(405, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 19);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.Text = "By Quantity";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(405, 47);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 19);
-            this.radioButton3.TabIndex = 26;
-            this.radioButton3.Text = "By Provider";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            rbByProviderID.AutoSize = true;
+            rbByProviderID.Location = new Point(397, 47);
+            rbByProviderID.Name = "rbByProviderID";
+            rbByProviderID.Size = new Size(96, 19);
+            rbByProviderID.TabIndex = 26;
+            rbByProviderID.Text = "By ProviderID";
+            rbByProviderID.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(10, 22);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(22, 23);
-            this.btnSearch.TabIndex = 24;
-            this.btnSearch.Text = "🔎";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(10, 22);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(22, 23);
+            btnSearch.TabIndex = 24;
+            btnSearch.Text = "🔎";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // dataGridView
             // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(26, 173);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(718, 285);
-            this.dataGridView.TabIndex = 19;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AutoGenerateColumns = false;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, quantityDataGridViewTextBoxColumn, priceDataGridViewTextBoxColumn, categoryIdDataGridViewTextBoxColumn, providerIdDataGridViewTextBoxColumn, categoryDataGridViewTextBoxColumn, historiesDataGridViewTextBoxColumn, providerDataGridViewTextBoxColumn });
+            dataGridView.DataSource = productBindingSource;
+            dataGridView.Location = new Point(13, 174);
+            dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.RowHeadersWidth = 51;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(731, 284);
+            dataGridView.TabIndex = 19;
             // 
             // grSearch
             // 
-            this.grSearch.Controls.Add(this.radioButton3);
-            this.grSearch.Controls.Add(this.radioButton2);
-            this.grSearch.Controls.Add(this.radioButton1);
-            this.grSearch.Controls.Add(this.radioByName);
-            this.grSearch.Controls.Add(this.txtSearchValue);
-            this.grSearch.Controls.Add(this.btnSearch);
-            this.grSearch.Location = new System.Drawing.Point(13, 72);
-            this.grSearch.Name = "grSearch";
-            this.grSearch.Size = new System.Drawing.Size(499, 83);
-            this.grSearch.TabIndex = 40;
-            this.grSearch.TabStop = false;
-            this.grSearch.Text = "Search";
+            grSearch.Controls.Add(rbByProviderID);
+            grSearch.Controls.Add(rbByID);
+            grSearch.Controls.Add(rbByCatID);
+            grSearch.Controls.Add(rbByName);
+            grSearch.Controls.Add(txtSearchValue);
+            grSearch.Controls.Add(btnSearch);
+            grSearch.Location = new Point(13, 79);
+            grSearch.Name = "grSearch";
+            grSearch.Size = new Size(499, 83);
+            grSearch.TabIndex = 40;
+            grSearch.TabStop = false;
+            grSearch.Text = "Search";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DataSource = productBindingSource;
+            comboBox1.DisplayMember = "Id";
+            comboBox1.Location = new Point(469, 45);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(101, 23);
+            comboBox1.TabIndex = 42;
+            comboBox1.ValueMember = "Id";
+            // 
+            // grActions
+            // 
+            grActions.Controls.Add(comboBox1);
+            grActions.Controls.Add(btnAdd);
+            grActions.Controls.Add(btnDelete);
+            grActions.Controls.Add(btnUpdate);
+            grActions.Location = new Point(12, -2);
+            grActions.Name = "grActions";
+            grActions.Size = new Size(732, 78);
+            grActions.TabIndex = 43;
+            grActions.TabStop = false;
+            grActions.Text = "Actions";
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = SystemColors.Control;
+            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClose.ForeColor = SystemColors.ActiveCaptionText;
+            btnClose.Location = new Point(330, 467);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(82, 22);
+            btnClose.TabIndex = 44;
+            btnClose.Text = "CLOSE";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryIdDataGridViewTextBoxColumn
+            // 
+            categoryIdDataGridViewTextBoxColumn.DataPropertyName = "CategoryId";
+            categoryIdDataGridViewTextBoxColumn.HeaderText = "CategoryId";
+            categoryIdDataGridViewTextBoxColumn.Name = "categoryIdDataGridViewTextBoxColumn";
+            categoryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // providerIdDataGridViewTextBoxColumn
+            // 
+            providerIdDataGridViewTextBoxColumn.DataPropertyName = "ProviderId";
+            providerIdDataGridViewTextBoxColumn.HeaderText = "ProviderId";
+            providerIdDataGridViewTextBoxColumn.Name = "providerIdDataGridViewTextBoxColumn";
+            providerIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // historiesDataGridViewTextBoxColumn
+            // 
+            historiesDataGridViewTextBoxColumn.DataPropertyName = "Histories";
+            historiesDataGridViewTextBoxColumn.HeaderText = "Histories";
+            historiesDataGridViewTextBoxColumn.Name = "historiesDataGridViewTextBoxColumn";
+            historiesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // providerDataGridViewTextBoxColumn
+            // 
+            providerDataGridViewTextBoxColumn.DataPropertyName = "Provider";
+            providerDataGridViewTextBoxColumn.HeaderText = "Provider";
+            providerDataGridViewTextBoxColumn.Name = "providerDataGridViewTextBoxColumn";
+            providerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rbByID
+            // 
+            rbByID.AutoSize = true;
+            rbByID.Location = new Point(397, 22);
+            rbByID.Name = "rbByID";
+            rbByID.Size = new Size(52, 19);
+            rbByID.TabIndex = 25;
+            rbByID.Text = "By ID";
+            rbByID.UseVisualStyleBackColor = true;
             // 
             // frmProductManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 470);
-            this.Controls.Add(this.grFilter);
-            this.Controls.Add(this.grSearch);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.Price);
-            this.Controls.Add(this.txtProductName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtInStock);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCategoryId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.txtProductID);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView);
-            this.Name = "frmProductManagement";
-            this.Text = "Product Management";
-            this.grFilter.ResumeLayout(false);
-            this.grFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.grSearch.ResumeLayout(false);
-            this.grSearch.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(757, 500);
+            Controls.Add(btnClose);
+            Controls.Add(grFilter);
+            Controls.Add(grSearch);
+            Controls.Add(btnExport);
+            Controls.Add(btnImport);
+            Controls.Add(txtPrice);
+            Controls.Add(Price);
+            Controls.Add(txtProductName);
+            Controls.Add(label4);
+            Controls.Add(txtInStock);
+            Controls.Add(label3);
+            Controls.Add(txtCategoryId);
+            Controls.Add(label2);
+            Controls.Add(btnLoad);
+            Controls.Add(label1);
+            Controls.Add(dataGridView);
+            Controls.Add(grActions);
+            Name = "frmProductManagement";
+            Text = "Product Management";
+            grFilter.ResumeLayout(false);
+            grFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            grSearch.ResumeLayout(false);
+            grSearch.PerformLayout();
+            grActions.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -359,21 +485,33 @@
         private TextBox txtCategoryId;
         private Label label2;
         private Button btnLoad;
-        private TextBox txtProductID;
         private Label label1;
         private Button btnDelete;
         private Button btnAdd;
-        private Button button1;
+        private Button btnExport;
         private GroupBox grFilter;
         private ComboBox cboCountry;
         private Label lbSearchCountry;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private RadioButton radioByName;
+        private RadioButton rbByProviderID;
+        private RadioButton rbByCatID;
+        private RadioButton rbByName;
         private TextBox txtSearchValue;
         private Button btnSearch;
         private DataGridView dataGridView;
         private GroupBox grSearch;
+        private BindingSource productBindingSource;
+        private ComboBox comboBox1;
+        private GroupBox grActions;
+        private Button btnClose;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn providerIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn historiesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn providerDataGridViewTextBoxColumn;
+        private RadioButton rbByID;
     }
 }

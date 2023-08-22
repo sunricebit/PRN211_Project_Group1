@@ -28,47 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvHistory = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            dgvHistory = new DataGridView();
+            btnClose = new Button();
+            historyBindingSource = new BindingSource(components);
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statusDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            transactionDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            quatityDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            noteDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)historyBindingSource).BeginInit();
+            SuspendLayout();
             // 
             // dgvHistory
             // 
-            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(12, 12);
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.RowTemplate.Height = 25;
-            this.dgvHistory.Size = new System.Drawing.Size(663, 246);
-            this.dgvHistory.TabIndex = 0;
+            dgvHistory.AllowUserToAddRows = false;
+            dgvHistory.AllowUserToDeleteRows = false;
+            dgvHistory.AutoGenerateColumns = false;
+            dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistory.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productIdDataGridViewTextBoxColumn, statusDataGridViewTextBoxColumn, transactionDateDataGridViewTextBoxColumn, quatityDataGridViewTextBoxColumn, noteDataGridViewTextBoxColumn, productDataGridViewTextBoxColumn });
+            dgvHistory.DataSource = historyBindingSource;
+            dgvHistory.Location = new Point(12, 12);
+            dgvHistory.Name = "dgvHistory";
+            dgvHistory.ReadOnly = true;
+            dgvHistory.RowTemplate.Height = 25;
+            dgvHistory.Size = new Size(743, 246);
+            dgvHistory.TabIndex = 0;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(292, 284);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            btnClose.Location = new Point(336, 264);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(75, 23);
+            btnClose.TabIndex = 1;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            // 
+            // historyBindingSource
+            // 
+            historyBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.History);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // transactionDateDataGridViewTextBoxColumn
+            // 
+            transactionDateDataGridViewTextBoxColumn.DataPropertyName = "TransactionDate";
+            transactionDateDataGridViewTextBoxColumn.HeaderText = "TransactionDate";
+            transactionDateDataGridViewTextBoxColumn.Name = "transactionDateDataGridViewTextBoxColumn";
+            // 
+            // quatityDataGridViewTextBoxColumn
+            // 
+            quatityDataGridViewTextBoxColumn.DataPropertyName = "Quatity";
+            quatityDataGridViewTextBoxColumn.HeaderText = "Quatity";
+            quatityDataGridViewTextBoxColumn.Name = "quatityDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            productDataGridViewTextBoxColumn.HeaderText = "Product";
+            productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             // 
             // frmHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 341);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dgvHistory);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmHistory";
-            this.Text = "Transaction History";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(765, 306);
+            Controls.Add(btnClose);
+            Controls.Add(dgvHistory);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmHistory";
+            Text = "Transaction History";
+            Load += frmHistory_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)historyBindingSource).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private DataGridView dgvHistory;
         private Button btnClose;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn transactionDateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn quatityDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
+        private BindingSource historyBindingSource;
     }
 }

@@ -16,5 +16,10 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void frmHistory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -66,6 +66,7 @@
             btnCheck.TabIndex = 2;
             btnCheck.Text = "Check";
             btnCheck.UseVisualStyleBackColor = true;
+            btnCheck.Click += btnCheck_Click;
             // 
             // gbPass
             // 
@@ -75,6 +76,7 @@
             gbPass.Controls.Add(txtNewPass);
             gbPass.Controls.Add(label3);
             gbPass.Controls.Add(label2);
+            gbPass.Enabled = false;
             gbPass.Location = new Point(13, 53);
             gbPass.Name = "gbPass";
             gbPass.Size = new Size(400, 160);
@@ -91,6 +93,7 @@
             btnSave.TabIndex = 6;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // txtConfirmPass
             // 
@@ -134,12 +137,12 @@
             btnBack.TabIndex = 4;
             btnBack.Text = "Back to login";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // ResetPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(424, 265);
             Controls.Add(btnBack);

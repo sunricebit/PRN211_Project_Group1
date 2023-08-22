@@ -65,5 +65,15 @@ namespace Project
         private void button3_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
