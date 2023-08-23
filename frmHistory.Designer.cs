@@ -146,13 +146,5 @@
         private DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
         private BindingSource historyBindingSource;
         private Button btnClose;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn transactionDateDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn quatityDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
-        private BindingSource historyBindingSource;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using DataAccess;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using PRN211_Project_Group1;
 using PRN211_Project_Group1.DataAccess;
 using Project;
@@ -7,10 +9,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace FurnitureWinApp
 {
@@ -48,12 +52,147 @@ namespace FurnitureWinApp
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                saveFileDialog.FilterIndex = 1;
+                saveFileDialog.Title = "Lưu tập tin Excel";
 
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = saveFileDialog.FileName;
+                    FileInfo file = new FileInfo(selectedFilePath);
+                    ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+                    var productsToExport = new List<ProductExport>()
+                    {
+                        new ProductExport
+                        {
+                            CategoryId = 1,
+                            Price =2,
+                            ProductName ="abc",
+                            ProviderId = 1,
+                            Quantity = 1
+                        },
+                        new ProductExport
+                        {
+                            CategoryId = 2,
+                            Price = 3,
+                            ProductName ="asda",
+                            ProviderId = 1,
+                            Quantity = 1
+                        },
+                        new ProductExport
+                        {
+                            CategoryId = 6,
+                            Price = 65,
+                            ProductName ="dasfe",
+                            ProviderId = 5,
+                            Quantity = 56
+                        },
+                    };
+                    //foreach (var item in (BindingList<Product>)dataGridView.DataSource)
+                    //{
+                    //    ProductExport pe = new ProductExport()
+                    //    {
+                    //        CategoryId = item.CategoryId.Value,
+                    //        Price = item.Price.Value,
+                    //        ProductName = item.ProductName,
+                    //        ProviderId = item.ProviderId.Value,
+                    //        Quantity = item.Quantity.Value,
+                    //    };
+                    //    productsToExport.Add(pe);
+                    //}
+                    SaveExcelFile(productsToExport, file);
+                    MessageBox.Show("Tập tin Excel đã được lưu tại: " + selectedFilePath);
+                }
+            }
         }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            string selectedFilePath = String.Empty;
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\"; 
+                openFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx"; 
+                openFileDialog.FilterIndex = 1;
 
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    selectedFilePath = openFileDialog.FileName;
+                    MessageBox.Show("Bạn đã chọn tập tin: " + selectedFilePath);
+                }
+            }
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            FileInfo file = new FileInfo(selectedFilePath);
+            List<ProductExport> productsToAdd = LoadExcelFile(file);
+            foreach(var product in productsToAdd)
+            {
+                Product p = new Product()
+                {
+                    CategoryId = product.CategoryId,
+                    Quantity = product.Quantity,
+                    ProductName = product.ProductName,
+                    Price = product.Price,
+                    ProviderId = product.ProviderId,
+                };
+                productRepository.AddProduct(p);
+            }
+        }
+
+        private void SaveExcelFile(List<ProductExport> productExports, FileInfo file)
+        {
+            if (file.Exists)
+            {
+                file.Delete();
+            }
+            var package = new ExcelPackage(file);
+
+            var ws = package.Workbook.Worksheets.Add("MainReport");
+
+            var range = ws.Cells["A1"].LoadFromCollection(productExports, true);
+            range.AutoFitColumns();
+
+            ws.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            ws.Row(1).Style.Font.Bold = true;
+            int columnCount = ws.Dimension.End.Column;
+
+            for (int col = 1; col <= columnCount; col++)
+            {
+                if (ws.Cells[1, col].Value != null)
+                {
+                    ws.Cells[1, col].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[1, col].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.Yellow);
+                }
+            }
+
+            package.Save();
+        }
+
+        private List<ProductExport> LoadExcelFile(FileInfo file)
+        {
+            List<ProductExport> products = new List<ProductExport>();
+            var package = new ExcelPackage(file);
+            FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read);
+            package.Load(fileStream);
+            var ws = package.Workbook.Worksheets[0];
+            int columnCount = 1;
+            int rowCount = 2;
+
+            while (string.IsNullOrWhiteSpace(ws.Cells[rowCount, columnCount].Value?.ToString()) == false)
+            {
+                ProductExport pe = new ProductExport
+                {
+                    ProductName = ws.Cells[rowCount, columnCount].Value.ToString(),
+                    Quantity = int.Parse(ws.Cells[rowCount, columnCount + 1].Value.ToString()),
+                    Price = double.Parse(ws.Cells[rowCount, columnCount + 2].Value.ToString()),
+                    ProviderId = int.Parse(ws.Cells[rowCount, columnCount + 3].Value.ToString()),
+                    CategoryId = int.Parse(ws.Cells[rowCount, columnCount + 4].Value.ToString()),
+                };
+                rowCount++;
+                products.Add(pe);
+            }
+            return products;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -123,6 +262,7 @@ namespace FurnitureWinApp
                 MessageBox.Show($"An error occured! ({ex.Message})", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try

@@ -24,3 +24,12 @@ public partial class Product
     [Browsable(false)]
     public virtual Provider? Provider { get; set; }
 }
+
+public class ProductExport
+{
+    public string ProductName { get; set; }
+    public int Quantity { get; set; }
+    public double Price { get; set; }
+    public int ProviderId { get; set; }
+    public int CategoryId { get; set; }
+}
