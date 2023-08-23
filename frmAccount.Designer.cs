@@ -30,7 +30,6 @@
         {
             btnClose = new Button();
             btnSave = new Button();
-            txtRole = new TextBox();
             label5 = new Label();
             txtEmail = new TextBox();
             label1 = new Label();
@@ -42,6 +41,7 @@
             label3 = new Label();
             txtFullname = new TextBox();
             label2 = new Label();
+            cboRole = new ComboBox();
             SuspendLayout();
             // 
             // btnClose
@@ -71,13 +71,6 @@
             btnSave.Text = "SAVE";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
-            // 
-            // txtRole
-            // 
-            txtRole.Location = new Point(136, 169);
-            txtRole.Name = "txtRole";
-            txtRole.Size = new Size(145, 23);
-            txtRole.TabIndex = 72;
             // 
             // label5
             // 
@@ -180,12 +173,23 @@
             label2.TabIndex = 61;
             label2.Text = "Fullname";
             // 
+            // cboRole
+            // 
+            cboRole.DisplayMember = "Role";
+            cboRole.FormattingEnabled = true;
+            cboRole.Items.AddRange(new object[] { "Admin", "Manager", "Member" });
+            cboRole.Location = new Point(136, 169);
+            cboRole.Name = "cboRole";
+            cboRole.Size = new Size(145, 23);
+            cboRole.TabIndex = 72;
+            cboRole.ValueMember = "Role";
+            // 
             // frmAccount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(332, 261);
-            Controls.Add(txtRole);
+            Controls.Add(cboRole);
             Controls.Add(label5);
             Controls.Add(txtEmail);
             Controls.Add(label1);
@@ -200,7 +204,9 @@
             Controls.Add(btnClose);
             Controls.Add(btnSave);
             Name = "frmAccount";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Account";
+            Load += frmAccount_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,7 +215,6 @@
 
         private Button btnClose;
         private Button btnSave;
-        private TextBox txtRole;
         private Label label5;
         private TextBox txtEmail;
         private Label label1;
@@ -221,5 +226,6 @@
         private Label label3;
         private TextBox txtFullname;
         private Label label2;
+        private ComboBox cboRole;
     }
 }

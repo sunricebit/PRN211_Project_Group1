@@ -92,6 +92,7 @@
             Controls.Add(txtName);
             Controls.Add(label2);
             Name = "frmCategory";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Category";
             ResumeLayout(false);
             PerformLayout();

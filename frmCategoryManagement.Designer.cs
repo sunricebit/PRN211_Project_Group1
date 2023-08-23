@@ -41,7 +41,7 @@
             dataGridView = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             categoryNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            categoryBindingSource2 = new BindingSource(components);
             categoryBindingSource = new BindingSource(components);
             grActions = new GroupBox();
             comboBox1 = new ComboBox();
@@ -49,7 +49,9 @@
             rbName = new RadioButton();
             rbId = new RadioButton();
             grSearch = new GroupBox();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource).BeginInit();
             grActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource1).BeginInit();
@@ -64,6 +66,7 @@
             btnUpdate.TabIndex = 47;
             btnUpdate.Text = "⇧";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label4
             // 
@@ -100,6 +103,7 @@
             btnLoad.TabIndex = 42;
             btnLoad.Text = "↻";
             btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // txtSearch
             // 
@@ -116,6 +120,7 @@
             btnSearch.TabIndex = 40;
             btnSearch.Text = "🔎";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnDelete
             // 
@@ -125,6 +130,7 @@
             btnDelete.TabIndex = 39;
             btnDelete.Text = "-";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 
@@ -134,6 +140,7 @@
             btnAdd.TabIndex = 38;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // dataGridView
             // 
@@ -141,8 +148,8 @@
             dataGridView.AllowUserToDeleteRows = false;
             dataGridView.AutoGenerateColumns = false;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, categoryNameDataGridViewTextBoxColumn, productsDataGridViewTextBoxColumn });
-            dataGridView.DataSource = categoryBindingSource;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, categoryNameDataGridViewTextBoxColumn });
+            dataGridView.DataSource = categoryBindingSource2;
             dataGridView.Location = new Point(12, 153);
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
@@ -165,12 +172,9 @@
             categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
             categoryNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // productsDataGridViewTextBoxColumn
+            // categoryBindingSource2
             // 
-            productsDataGridViewTextBoxColumn.DataPropertyName = "Products";
-            productsDataGridViewTextBoxColumn.HeaderText = "Products";
-            productsDataGridViewTextBoxColumn.Name = "productsDataGridViewTextBoxColumn";
-            productsDataGridViewTextBoxColumn.ReadOnly = true;
+            categoryBindingSource2.DataSource = typeof(PRN211_Project_Group1.DataAccess.Category);
             // 
             // categoryBindingSource
             // 
@@ -242,18 +246,35 @@
             grSearch.TabStop = false;
             grSearch.Text = "Search";
             // 
+            // btnClose
+            // 
+            btnClose.BackColor = SystemColors.Control;
+            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClose.ForeColor = SystemColors.ActiveCaptionText;
+            btnClose.Location = new Point(223, 408);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(82, 22);
+            btnClose.TabIndex = 53;
+            btnClose.Text = "CLOSE";
+            btnClose.UseVisualStyleBackColor = false;
+            // 
             // frmCategoryManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(558, 421);
+            ClientSize = new Size(558, 441);
+            Controls.Add(btnClose);
             Controls.Add(btnLoad);
             Controls.Add(dataGridView);
             Controls.Add(grActions);
             Controls.Add(grSearch);
             Name = "frmCategoryManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Category Management";
+            Load += frmCategoryManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)categoryBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource).EndInit();
             grActions.ResumeLayout(false);
             grActions.PerformLayout();
@@ -285,5 +306,7 @@
         private RadioButton rbName;
         private RadioButton rbId;
         private GroupBox grSearch;
+        private BindingSource categoryBindingSource2;
+        private Button btnClose;
     }
 }

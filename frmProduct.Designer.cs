@@ -28,41 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            txtPrice = new TextBox();
+            txtQuantity = new TextBox();
+            txtProductName = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             btnClose = new Button();
             btnSave = new Button();
-            richTextBox1 = new RichTextBox();
+            txtNote = new RichTextBox();
             label5 = new Label();
+            txtProviderID = new TextBox();
+            label1 = new Label();
+            txtCategoryId = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
-            // textBox4
+            // txtPrice
             // 
-            textBox4.Location = new Point(135, 139);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(206, 23);
-            textBox4.TabIndex = 22;
+            txtPrice.Location = new Point(135, 186);
+            txtPrice.Margin = new Padding(3, 2, 3, 2);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(206, 23);
+            txtPrice.TabIndex = 22;
             // 
-            // textBox3
+            // txtQuantity
             // 
-            textBox3.Location = new Point(135, 84);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(206, 23);
-            textBox3.TabIndex = 21;
+            txtQuantity.Location = new Point(135, 65);
+            txtQuantity.Margin = new Padding(3, 2, 3, 2);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(206, 23);
+            txtQuantity.TabIndex = 21;
             // 
-            // textBox2
+            // txtProductName
             // 
-            textBox2.Location = new Point(135, 25);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(206, 23);
-            textBox2.TabIndex = 20;
+            txtProductName.Location = new Point(135, 25);
+            txtProductName.Margin = new Padding(3, 2, 3, 2);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(206, 23);
+            txtProductName.TabIndex = 20;
             // 
             // label4
             // 
@@ -70,7 +74,7 @@
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(37, 141);
+            label4.Location = new Point(37, 188);
             label4.Name = "label4";
             label4.Size = new Size(38, 15);
             label4.TabIndex = 18;
@@ -82,7 +86,7 @@
             label3.BackColor = SystemColors.Control;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(37, 86);
+            label3.Location = new Point(37, 67);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
             label3.TabIndex = 17;
@@ -105,7 +109,7 @@
             btnClose.BackColor = SystemColors.Control;
             btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnClose.ForeColor = SystemColors.ActiveCaptionText;
-            btnClose.Location = new Point(259, 278);
+            btnClose.Location = new Point(259, 325);
             btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(82, 22);
@@ -119,7 +123,7 @@
             btnSave.BackColor = SystemColors.Control;
             btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = SystemColors.ActiveCaptionText;
-            btnSave.Location = new Point(135, 278);
+            btnSave.Location = new Point(135, 325);
             btnSave.Margin = new Padding(3, 2, 3, 2);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(82, 22);
@@ -128,13 +132,13 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
-            // richTextBox1
+            // txtNote
             // 
-            richTextBox1.Location = new Point(135, 177);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(206, 67);
-            richTextBox1.TabIndex = 25;
-            richTextBox1.Text = "";
+            txtNote.Location = new Point(135, 224);
+            txtNote.Name = "txtNote";
+            txtNote.Size = new Size(206, 67);
+            txtNote.TabIndex = 25;
+            txtNote.Text = "";
             // 
             // label5
             // 
@@ -142,30 +146,74 @@
             label5.BackColor = SystemColors.Control;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(37, 180);
+            label5.Location = new Point(37, 227);
             label5.Name = "label5";
             label5.Size = new Size(35, 15);
             label5.TabIndex = 26;
             label5.Text = "Note";
             // 
+            // txtProviderID
+            // 
+            txtProviderID.Location = new Point(135, 105);
+            txtProviderID.Name = "txtProviderID";
+            txtProviderID.Size = new Size(206, 23);
+            txtProviderID.TabIndex = 45;
+            // 
+            // btnClose
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Control;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(37, 108);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 15);
+            label1.TabIndex = 46;
+            label1.Text = "Provider ID:";
+            // 
+            // txtCategoryId
+            // 
+            txtCategoryId.Location = new Point(135, 145);
+            txtCategoryId.Name = "txtCategoryId";
+            txtCategoryId.Size = new Size(206, 23);
+            txtCategoryId.TabIndex = 48;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.Control;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(37, 148);
+            label6.Name = "label6";
+            label6.Size = new Size(76, 15);
+            label6.TabIndex = 49;
+            label6.Text = "Category ID:";
+            // 
             // frmProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(374, 326);
+            ClientSize = new Size(397, 364);
+            Controls.Add(label6);
+            Controls.Add(txtCategoryId);
+            Controls.Add(label1);
+            Controls.Add(txtProviderID);
             Controls.Add(label5);
-            Controls.Add(richTextBox1);
+            Controls.Add(txtNote);
             Controls.Add(btnClose);
             Controls.Add(btnSave);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(txtPrice);
+            Controls.Add(txtQuantity);
+            Controls.Add(txtProductName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmProduct";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Product";
+            Load += frmProduct_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,15 +223,19 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtPrice;
+        private TextBox txtQuantity;
+        private TextBox txtProductName;
         private Label label4;
         private Label label3;
         private Label label2;
         private Button btnClose;
         private Button btnSave;
-        private RichTextBox richTextBox1;
+        private RichTextBox txtNote;
         private Label label5;
+        private TextBox txtProviderID;
+        private Label label1;
+        private TextBox txtCategoryId;
+        private Label label6;
     }
 }

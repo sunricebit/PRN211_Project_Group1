@@ -54,7 +54,6 @@
             accountBindingSource = new BindingSource(components);
             txtEmail = new TextBox();
             label1 = new Label();
-            txtRole = new TextBox();
             label5 = new Label();
             label6 = new Label();
             rbID = new RadioButton();
@@ -64,6 +63,7 @@
             cboRole = new ComboBox();
             accountBindingSource1 = new BindingSource(components);
             groupBox1 = new GroupBox();
+            cboSelectRole = new ComboBox();
             grFilter = new GroupBox();
             groupBox3 = new GroupBox();
             btnClose = new Button();
@@ -286,13 +286,6 @@
             label1.TabIndex = 57;
             label1.Text = "Email";
             // 
-            // txtRole
-            // 
-            txtRole.Location = new Point(473, 50);
-            txtRole.Name = "txtRole";
-            txtRole.Size = new Size(145, 23);
-            txtRole.TabIndex = 60;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -374,10 +367,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cboSelectRole);
             groupBox1.Controls.Add(cboId);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtEmail);
-            groupBox1.Controls.Add(txtRole);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(btnAdd);
             groupBox1.Controls.Add(btnUpdate);
@@ -388,6 +381,17 @@
             groupBox1.TabIndex = 68;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // cboSelectRole
+            // 
+            cboSelectRole.DataSource = accountBindingSource1;
+            cboSelectRole.DisplayMember = "Role";
+            cboSelectRole.FormattingEnabled = true;
+            cboSelectRole.Location = new Point(473, 50);
+            cboSelectRole.Name = "cboSelectRole";
+            cboSelectRole.Size = new Size(145, 23);
+            cboSelectRole.TabIndex = 68;
+            cboSelectRole.ValueMember = "Role";
             // 
             // grFilter
             // 
@@ -410,6 +414,18 @@
             groupBox3.Text = "Search";
             // 
             // btnClose
+            // 
+            btnClose.BackColor = SystemColors.Control;
+            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClose.ForeColor = SystemColors.ActiveCaptionText;
+            btnClose.Location = new Point(357, 444);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(82, 22);
+            btnClose.TabIndex = 70;
+            btnClose.Text = "CLOSE";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             btnClose.BackColor = SystemColors.Control;
             btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -448,6 +464,7 @@
             Controls.Add(grFilter);
             Controls.Add(groupBox1);
             Name = "frmAccountManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Account Management";
             Load += frmAccountManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dgvAccount).EndInit();
@@ -480,7 +497,6 @@
         private DataGridView dgvAccount;
         private TextBox txtEmail;
         private Label label1;
-        private TextBox txtRole;
         private Label label5;
         private Label label6;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -501,5 +517,6 @@
         private GroupBox groupBox3;
         private BindingSource accountBindingSource1;
         private Button btnClose;
+        private ComboBox cboSelectRole;
     }
 }

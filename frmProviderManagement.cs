@@ -60,35 +60,5 @@ namespace Project
         {
 
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

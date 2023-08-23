@@ -141,6 +141,7 @@
             Controls.Add(label2);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmProvider";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Provider";
             ResumeLayout(false);
             PerformLayout();

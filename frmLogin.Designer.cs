@@ -35,7 +35,8 @@
             btnLogin = new Button();
             label1 = new Label();
             txtPassword = new TextBox();
-            txtEmail = new TextBox();
+            txtUsername = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // linkLabel1
@@ -106,9 +107,9 @@
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(127, 107);
             label1.Name = "label1";
-            label1.Size = new Size(47, 20);
+            label1.Size = new Size(80, 20);
             label1.TabIndex = 12;
-            label1.Text = "Email";
+            label1.Text = "Username";
             // 
             // txtPassword
             // 
@@ -118,18 +119,29 @@
             txtPassword.TabIndex = 11;
             txtPassword.UseSystemPasswordChar = true;
             // 
-            // txtEmail
+            // txtUsername
             // 
-            txtEmail.Location = new Point(232, 104);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(205, 23);
-            txtEmail.TabIndex = 10;
+            txtUsername.Location = new Point(232, 104);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(205, 23);
+            txtUsername.TabIndex = 10;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(179, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 15);
+            label4.TabIndex = 18;
+            label4.Text = "label4";
             // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(556, 322);
+            Controls.Add(label4);
             Controls.Add(linkLabel1);
             Controls.Add(label2);
             Controls.Add(label3);
@@ -137,8 +149,9 @@
             Controls.Add(btnLogin);
             Controls.Add(label1);
             Controls.Add(txtPassword);
-            Controls.Add(txtEmail);
+            Controls.Add(txtUsername);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             Load += frmLogin_Load;
             ResumeLayout(false);
@@ -154,6 +167,7 @@
         private Button btnLogin;
         private Label label1;
         private TextBox txtPassword;
-        private TextBox txtEmail;
+        private TextBox txtUsername;
+        private Label label4;
     }
 }

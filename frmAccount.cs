@@ -26,5 +26,10 @@ namespace FurnitureWinApp
         {
 
         }
+
+        private void frmAccount_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

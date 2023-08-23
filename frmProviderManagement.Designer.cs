@@ -50,7 +50,6 @@
             providerNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             phoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             addressDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             providerBindingSource = new BindingSource(components);
             grActions = new GroupBox();
             comboBox1 = new ComboBox();
@@ -246,7 +245,7 @@
             dgvProvider.AllowUserToDeleteRows = false;
             dgvProvider.AutoGenerateColumns = false;
             dgvProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProvider.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, providerNameDataGridViewTextBoxColumn, phoneDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn, productsDataGridViewTextBoxColumn });
+            dgvProvider.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, providerNameDataGridViewTextBoxColumn, phoneDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn });
             dgvProvider.DataSource = providerBindingSource;
             dgvProvider.Location = new Point(22, 280);
             dgvProvider.Margin = new Padding(3, 2, 3, 2);
@@ -284,13 +283,6 @@
             addressDataGridViewTextBoxColumn.HeaderText = "Address";
             addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productsDataGridViewTextBoxColumn
-            // 
-            productsDataGridViewTextBoxColumn.DataPropertyName = "Products";
-            productsDataGridViewTextBoxColumn.HeaderText = "Products";
-            productsDataGridViewTextBoxColumn.Name = "productsDataGridViewTextBoxColumn";
-            productsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // providerBindingSource
             // 
@@ -373,7 +365,9 @@
             Controls.Add(grActions);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmProviderManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Provider Management";
+            Load += frmProviderManagement_Load;
             grSearch.ResumeLayout(false);
             grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProvider).EndInit();
