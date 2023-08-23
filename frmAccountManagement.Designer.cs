@@ -427,18 +427,6 @@
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
-            btnClose.BackColor = SystemColors.Control;
-            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose.ForeColor = SystemColors.ActiveCaptionText;
-            btnClose.Location = new Point(357, 444);
-            btnClose.Margin = new Padding(3, 2, 3, 2);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(82, 22);
-            btnClose.TabIndex = 70;
-            btnClose.Text = "CLOSE";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
-            // 
             // frmAccountManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);

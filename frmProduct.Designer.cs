@@ -159,7 +159,7 @@
             txtProviderID.Size = new Size(206, 23);
             txtProviderID.TabIndex = 45;
             // 
-            // btnClose
+            // txtProviderID
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;

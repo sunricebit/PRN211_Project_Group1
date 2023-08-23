@@ -117,30 +117,6 @@
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
-            // transactionDateDataGridViewTextBoxColumn
-            // 
-            transactionDateDataGridViewTextBoxColumn.DataPropertyName = "TransactionDate";
-            transactionDateDataGridViewTextBoxColumn.HeaderText = "TransactionDate";
-            transactionDateDataGridViewTextBoxColumn.Name = "transactionDateDataGridViewTextBoxColumn";
-            // 
-            // quatityDataGridViewTextBoxColumn
-            // 
-            quatityDataGridViewTextBoxColumn.DataPropertyName = "Quatity";
-            quatityDataGridViewTextBoxColumn.HeaderText = "Quatity";
-            quatityDataGridViewTextBoxColumn.Name = "quatityDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
-            noteDataGridViewTextBoxColumn.HeaderText = "Note";
-            noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            // 
-            // productDataGridViewTextBoxColumn
-            // 
-            productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            productDataGridViewTextBoxColumn.HeaderText = "Product";
-            productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            // 
             // frmHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
