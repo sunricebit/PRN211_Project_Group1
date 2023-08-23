@@ -14,7 +14,16 @@ namespace PRN211_Project_Group1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmLogin());
-            Application.Run(new frmProductManagement());
+            Application.Run(new frmProductManagement(new DataAccess.Account()
+            {
+                Email = "abc",
+                FullName = "abc",
+                Id = 1,
+                Password = "1230",
+                Phone = "1230",
+                Role = "Manager",
+                Username = "abc"
+            }, new frmLogin()));
         }
     }
 }
