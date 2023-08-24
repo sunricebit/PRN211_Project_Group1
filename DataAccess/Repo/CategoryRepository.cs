@@ -21,6 +21,8 @@ namespace DataAccess
             return CategoryDAO.getInstance.SearchCategory(id);
         }
 
+        public Category GetCategory(int ProductID) => CategoryDAO.getInstance.GetCategory(ProductID);
+
         public IEnumerable<Category> SearchCategory(string name)
         {
             return CategoryDAO.getInstance.SearchCategory(name);
