@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using PRN211_Project_Group1.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,68 +14,33 @@ namespace Project
 {
     public partial class frmProvider : Form
     {
+        IProviderRepository providerRepository = new ProviderRepository();
         public frmProvider()
         {
             InitializeComponent();
         }
 
-        private void frmProvider_Load(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
-
+            Provider pro = null;
+            try
+            {
+                pro = new Provider
+                {
+                    ProviderName = txtProviderName.Text,
+                    Phone = txtPhone.Text,
+                    Address = txtAddress.Text,
+                };
+                providerRepository.AddProvider(pro);
+                MessageBox.Show("Add successfully!!", "Add new provider", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("At least 1 of the fields has invalid value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void btnClose_Click(object sender, EventArgs e) => Close();
     }
 }

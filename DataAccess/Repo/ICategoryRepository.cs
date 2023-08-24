@@ -11,6 +11,8 @@ namespace DataAccess
         public void AddCategory(Category Category);
         public void UpdateCategory(Category Category);
         public void RemoveCategory(int CategoryID);
+        public Category GetCategory(int id);
+
         public IEnumerable<Category> SearchCategory(int id);
         public IEnumerable<Category> SearchCategory(string name);
     }
