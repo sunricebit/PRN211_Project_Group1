@@ -28,360 +28,363 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            btnDelete = new Button();
-            btnUpdate = new Button();
-            btnAdd = new Button();
-            grSearch = new GroupBox();
-            radioByName = new RadioButton();
-            radioByID = new RadioButton();
-            txtSearchValue = new TextBox();
-            btnSearch = new Button();
-            lbSearch = new Label();
-            txtAddress = new TextBox();
-            txtPhone = new TextBox();
-            txtProviderName = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            dgvProvider = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            providerNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            phoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            addressDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            providerBindingSource = new BindingSource(components);
-            grActions = new GroupBox();
-            comboBox1 = new ComboBox();
-            btnLoad = new Button();
-            btnClose = new Button();
-            cboSort = new ComboBox();
-            grSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProvider).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)providerBindingSource).BeginInit();
-            grActions.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.grSearch = new System.Windows.Forms.GroupBox();
+            this.radioByName = new System.Windows.Forms.RadioButton();
+            this.radioByID = new System.Windows.Forms.RadioButton();
+            this.txtSearchValue = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lbSearch = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtProviderName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvProvider = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.providerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.providerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grActions = new System.Windows.Forms.GroupBox();
+            this.cboProviderID = new System.Windows.Forms.ComboBox();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.grSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providerBindingSource)).BeginInit();
+            this.grActions.SuspendLayout();
+            this.SuspendLayout();
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = SystemColors.Control;
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.ForeColor = SystemColors.ActiveCaptionText;
-            btnDelete.Location = new Point(433, 124);
-            btnDelete.Margin = new Padding(3, 2, 3, 2);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(82, 22);
-            btnDelete.TabIndex = 42;
-            btnDelete.Text = "DELETE";
-            btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click;
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Location = new System.Drawing.Point(433, 124);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 22);
+            this.btnDelete.TabIndex = 42;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = SystemColors.Control;
-            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdate.ForeColor = SystemColors.ActiveCaptionText;
-            btnUpdate.Location = new Point(320, 124);
-            btnUpdate.Margin = new Padding(3, 2, 3, 2);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(82, 22);
-            btnUpdate.TabIndex = 41;
-            btnUpdate.Text = "UPDATE";
-            btnUpdate.UseVisualStyleBackColor = false;
-            btnUpdate.Click += btnUpdate_Click;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdate.Location = new System.Drawing.Point(320, 124);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(82, 22);
+            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = SystemColors.Control;
-            btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.ForeColor = SystemColors.ActiveCaptionText;
-            btnAdd.Location = new Point(202, 124);
-            btnAdd.Margin = new Padding(3, 2, 3, 2);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(82, 22);
-            btnAdd.TabIndex = 40;
-            btnAdd.Text = "ADD";
-            btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdd.Location = new System.Drawing.Point(202, 124);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(82, 22);
+            this.btnAdd.TabIndex = 40;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // grSearch
             // 
-            grSearch.Controls.Add(radioByName);
-            grSearch.Controls.Add(radioByID);
-            grSearch.Controls.Add(txtSearchValue);
-            grSearch.Controls.Add(btnSearch);
-            grSearch.Controls.Add(lbSearch);
-            grSearch.Location = new Point(202, 170);
-            grSearch.Name = "grSearch";
-            grSearch.Size = new Size(313, 89);
-            grSearch.TabIndex = 38;
-            grSearch.TabStop = false;
-            grSearch.Text = "Search";
+            this.grSearch.Controls.Add(this.radioByName);
+            this.grSearch.Controls.Add(this.radioByID);
+            this.grSearch.Controls.Add(this.txtSearchValue);
+            this.grSearch.Controls.Add(this.btnSearch);
+            this.grSearch.Controls.Add(this.lbSearch);
+            this.grSearch.Location = new System.Drawing.Point(202, 170);
+            this.grSearch.Name = "grSearch";
+            this.grSearch.Size = new System.Drawing.Size(313, 89);
+            this.grSearch.TabIndex = 38;
+            this.grSearch.TabStop = false;
+            this.grSearch.Text = "Search";
             // 
             // radioByName
             // 
-            radioByName.AutoSize = true;
-            radioByName.Checked = true;
-            radioByName.Location = new Point(210, 53);
-            radioByName.Name = "radioByName";
-            radioByName.Size = new Size(73, 19);
-            radioByName.TabIndex = 23;
-            radioByName.TabStop = true;
-            radioByName.Text = "By Name";
-            radioByName.UseVisualStyleBackColor = true;
+            this.radioByName.AutoSize = true;
+            this.radioByName.Location = new System.Drawing.Point(210, 53);
+            this.radioByName.Name = "radioByName";
+            this.radioByName.Size = new System.Drawing.Size(73, 19);
+            this.radioByName.TabIndex = 23;
+            this.radioByName.Text = "By Name";
+            this.radioByName.UseVisualStyleBackColor = true;
             // 
             // radioByID
             // 
-            radioByID.AutoSize = true;
-            radioByID.Location = new Point(210, 23);
-            radioByID.Name = "radioByID";
-            radioByID.Size = new Size(51, 19);
-            radioByID.TabIndex = 22;
-            radioByID.TabStop = true;
-            radioByID.Text = "By Id";
-            radioByID.UseVisualStyleBackColor = true;
+            this.radioByID.AutoSize = true;
+            this.radioByID.Checked = true;
+            this.radioByID.Location = new System.Drawing.Point(210, 23);
+            this.radioByID.Name = "radioByID";
+            this.radioByID.Size = new System.Drawing.Size(51, 19);
+            this.radioByID.TabIndex = 22;
+            this.radioByID.TabStop = true;
+            this.radioByID.Text = "By Id";
+            this.radioByID.UseVisualStyleBackColor = true;
             // 
             // txtSearchValue
             // 
-            txtSearchValue.Location = new Point(72, 21);
-            txtSearchValue.Name = "txtSearchValue";
-            txtSearchValue.Size = new Size(118, 23);
-            txtSearchValue.TabIndex = 17;
+            this.txtSearchValue.Location = new System.Drawing.Point(72, 21);
+            this.txtSearchValue.Name = "txtSearchValue";
+            this.txtSearchValue.Size = new System.Drawing.Size(118, 23);
+            this.txtSearchValue.TabIndex = 17;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(72, 52);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
-            btnSearch.TabIndex = 21;
-            btnSearch.Text = "&Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            this.btnSearch.Location = new System.Drawing.Point(72, 52);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lbSearch
             // 
-            lbSearch.AutoSize = true;
-            lbSearch.Location = new Point(24, 22);
-            lbSearch.Name = "lbSearch";
-            lbSearch.Size = new Size(42, 15);
-            lbSearch.TabIndex = 16;
-            lbSearch.Text = "Search";
+            this.lbSearch.AutoSize = true;
+            this.lbSearch.Location = new System.Drawing.Point(24, 22);
+            this.lbSearch.Name = "lbSearch";
+            this.lbSearch.Size = new System.Drawing.Size(42, 15);
+            this.lbSearch.TabIndex = 16;
+            this.lbSearch.Text = "Search";
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(476, 72);
-            txtAddress.Margin = new Padding(3, 2, 3, 2);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(206, 23);
-            txtAddress.TabIndex = 37;
+            this.txtAddress.Location = new System.Drawing.Point(476, 72);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(206, 23);
+            this.txtAddress.TabIndex = 37;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(454, 21);
-            txtPhone.Margin = new Padding(3, 2, 3, 2);
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(206, 23);
-            txtPhone.TabIndex = 36;
+            this.txtPhone.Location = new System.Drawing.Point(454, 21);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(206, 23);
+            this.txtPhone.TabIndex = 36;
             // 
             // txtProviderName
             // 
-            txtProviderName.Location = new Point(158, 75);
-            txtProviderName.Margin = new Padding(3, 2, 3, 2);
-            txtProviderName.Name = "txtProviderName";
-            txtProviderName.Size = new Size(206, 23);
-            txtProviderName.TabIndex = 35;
+            this.txtProviderName.Location = new System.Drawing.Point(158, 75);
+            this.txtProviderName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProviderName.Name = "txtProviderName";
+            this.txtProviderName.Size = new System.Drawing.Size(206, 23);
+            this.txtProviderName.TabIndex = 35;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.Control;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(406, 77);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 15);
-            label4.TabIndex = 33;
-            label4.Text = "Address:";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(406, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Address:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.Control;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(384, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(45, 15);
-            label3.TabIndex = 32;
-            label3.Text = "Phone:";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(384, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Phone:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(52, 77);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 15);
-            label2.TabIndex = 31;
-            label2.Text = "Provider Name:";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(52, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 15);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Provider Name:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(30, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 15);
-            label1.TabIndex = 30;
-            label1.Text = "Provider ID:";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(30, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Provider ID:";
             // 
             // dgvProvider
             // 
-            dgvProvider.AllowUserToAddRows = false;
-            dgvProvider.AllowUserToDeleteRows = false;
-            dgvProvider.AutoGenerateColumns = false;
-            dgvProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProvider.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, providerNameDataGridViewTextBoxColumn, phoneDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn, productsDataGridViewTextBoxColumn });
-            dgvProvider.DataSource = providerBindingSource;
-            dgvProvider.Location = new Point(22, 280);
-            dgvProvider.Margin = new Padding(3, 2, 3, 2);
-            dgvProvider.Name = "dgvProvider";
-            dgvProvider.ReadOnly = true;
-            dgvProvider.RowHeadersWidth = 51;
-            dgvProvider.RowTemplate.Height = 29;
-            dgvProvider.Size = new Size(679, 165);
-            dgvProvider.TabIndex = 29;
+            this.dgvProvider.AllowUserToAddRows = false;
+            this.dgvProvider.AllowUserToDeleteRows = false;
+            this.dgvProvider.AutoGenerateColumns = false;
+            this.dgvProvider.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProvider.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.providerNameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn});
+            this.dgvProvider.DataSource = this.providerBindingSource;
+            this.dgvProvider.Location = new System.Drawing.Point(22, 280);
+            this.dgvProvider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProvider.Name = "dgvProvider";
+            this.dgvProvider.ReadOnly = true;
+            this.dgvProvider.RowHeadersWidth = 51;
+            this.dgvProvider.RowTemplate.Height = 29;
+            this.dgvProvider.Size = new System.Drawing.Size(679, 165);
+            this.dgvProvider.TabIndex = 29;
             // 
             // idDataGridViewTextBoxColumn
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // providerNameDataGridViewTextBoxColumn
             // 
-            providerNameDataGridViewTextBoxColumn.DataPropertyName = "ProviderName";
-            providerNameDataGridViewTextBoxColumn.HeaderText = "ProviderName";
-            providerNameDataGridViewTextBoxColumn.Name = "providerNameDataGridViewTextBoxColumn";
-            providerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.providerNameDataGridViewTextBoxColumn.DataPropertyName = "ProviderName";
+            this.providerNameDataGridViewTextBoxColumn.HeaderText = "ProviderName";
+            this.providerNameDataGridViewTextBoxColumn.Name = "providerNameDataGridViewTextBoxColumn";
+            this.providerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
-            phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
-            addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productsDataGridViewTextBoxColumn
-            // 
-            productsDataGridViewTextBoxColumn.DataPropertyName = "Products";
-            productsDataGridViewTextBoxColumn.HeaderText = "Products";
-            productsDataGridViewTextBoxColumn.Name = "productsDataGridViewTextBoxColumn";
-            productsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // providerBindingSource
             // 
-            providerBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Provider);
+            this.providerBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Provider);
             // 
             // grActions
             // 
-            grActions.Controls.Add(comboBox1);
-            grActions.Controls.Add(label1);
-            grActions.Controls.Add(label3);
-            grActions.Controls.Add(txtPhone);
-            grActions.Location = new Point(22, 3);
-            grActions.Name = "grActions";
-            grActions.Size = new Size(679, 161);
-            grActions.TabIndex = 43;
-            grActions.TabStop = false;
-            grActions.Text = "Actions";
+            this.grActions.Controls.Add(this.cboProviderID);
+            this.grActions.Controls.Add(this.label1);
+            this.grActions.Controls.Add(this.label3);
+            this.grActions.Controls.Add(this.txtPhone);
+            this.grActions.Location = new System.Drawing.Point(22, 3);
+            this.grActions.Name = "grActions";
+            this.grActions.Size = new System.Drawing.Size(679, 161);
+            this.grActions.TabIndex = 43;
+            this.grActions.TabStop = false;
+            this.grActions.Text = "Actions";
             // 
-            // comboBox1
+            // cboProviderID
             // 
-            comboBox1.DataSource = providerBindingSource;
-            comboBox1.DisplayMember = "Id";
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(136, 21);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(206, 23);
-            comboBox1.TabIndex = 37;
-            comboBox1.ValueMember = "Id";
+            this.cboProviderID.DataSource = this.providerBindingSource;
+            this.cboProviderID.DisplayMember = "Id";
+            this.cboProviderID.FormattingEnabled = true;
+            this.cboProviderID.Location = new System.Drawing.Point(136, 21);
+            this.cboProviderID.Name = "cboProviderID";
+            this.cboProviderID.Size = new System.Drawing.Size(206, 23);
+            this.cboProviderID.TabIndex = 37;
+            this.cboProviderID.ValueMember = "Id";
+            this.cboProviderID.SelectedIndexChanged += new System.EventHandler(this.cboProviderID_SelectedIndexChanged);
             // 
             // btnLoad
             // 
-            btnLoad.Location = new Point(571, 222);
-            btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(75, 23);
-            btnLoad.TabIndex = 45;
-            btnLoad.Text = "Load";
-            btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Location = new System.Drawing.Point(570, 220);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 45;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnClose
             // 
-            btnClose.BackColor = SystemColors.Control;
-            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose.ForeColor = SystemColors.ActiveCaptionText;
-            btnClose.Location = new Point(320, 466);
-            btnClose.Margin = new Padding(3, 2, 3, 2);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(82, 22);
-            btnClose.TabIndex = 46;
-            btnClose.Text = "CLOSE";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.Location = new System.Drawing.Point(320, 466);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(82, 22);
+            this.btnClose.TabIndex = 46;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
-            // cboSort
+            // comboBox1
             // 
-            cboSort.FormattingEnabled = true;
-            cboSort.Items.AddRange(new object[] { "All", "A-Z", "Z-A" });
-            cboSort.Location = new Point(549, 184);
-            cboSort.Name = "cboSort";
-            cboSort.Size = new Size(121, 23);
-            cboSort.TabIndex = 48;
-            cboSort.Text = "Sort Name...";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ALL",
+            "A-Z",
+            "Z-A"});
+            this.comboBox1.Location = new System.Drawing.Point(548, 191);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 49;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // frmProviderManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(723, 499);
-            Controls.Add(cboSort);
-            Controls.Add(btnClose);
-            Controls.Add(btnLoad);
-            Controls.Add(btnDelete);
-            Controls.Add(btnUpdate);
-            Controls.Add(btnAdd);
-            Controls.Add(grSearch);
-            Controls.Add(txtAddress);
-            Controls.Add(txtProviderName);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(dgvProvider);
-            Controls.Add(grActions);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "frmProviderManagement";
-            Text = "Provider Management";
-            grSearch.ResumeLayout(false);
-            grSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProvider).EndInit();
-            ((System.ComponentModel.ISupportInitialize)providerBindingSource).EndInit();
-            grActions.ResumeLayout(false);
-            grActions.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(723, 499);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.grSearch);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtProviderName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvProvider);
+            this.Controls.Add(this.grActions);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmProviderManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Provider Management";
+            this.Load += new System.EventHandler(this.frmProviderManagement_Load);
+            this.grSearch.ResumeLayout(false);
+            this.grSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providerBindingSource)).EndInit();
+            this.grActions.ResumeLayout(false);
+            this.grActions.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -412,7 +415,7 @@
         private GroupBox grActions;
         private Button btnLoad;
         private Button btnClose;
+        private ComboBox cboProviderID;
         private ComboBox comboBox1;
-        private ComboBox cboSort;
     }
 }

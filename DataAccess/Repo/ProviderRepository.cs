@@ -15,6 +15,7 @@ namespace DataAccess
         public void RemoveProvider(int ProviderID) => ProviderDAO.getInstance.RemoveProvider(ProviderID);
 
         public IEnumerable<Provider> SearchProvider(int id) => ProviderDAO.getInstance.SearchProvider(id);
+        public Provider GetProvider(int ProductID) => ProviderDAO.getInstance.GetProvider(ProductID);
 
         public IEnumerable<Provider> SearchProvider(string name) => ProviderDAO.getInstance.SearchProvider(name);
         public void UpdateProvider(Provider Provider) => ProviderDAO.getInstance.UpdateProvider(Provider);

@@ -1,4 +1,4 @@
-﻿using BusinessObject.BusinessObject;
+﻿
 using PRN211_Project_Group1.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -45,6 +45,20 @@ namespace DataAccess
             {
                 using var context = new InteriorProductManagementContext();//New DBContext instance
                 Product = context.Products.SingleOrDefault(m => m.Id == id);//Take Product entries by id and turn them into list
+            }
+            catch (Exception ex) { throw new Exception(ex.Message); }
+            return Product;
+        }
+        public Product GetProduct(string name)
+        {
+            Product Product = null;
+            try
+            {
+                using var context = new InteriorProductManagementContext();//New DBContext instance
+                Product = context.Products
+            .Where(p => p.ProductName.Equals(name))   // Filter by name
+            .OrderByDescending(p => p.Id)             // Order by ID in descending order (assuming higher IDs are more recent)
+            .FirstOrDefault();                         // Take the first one (most recent)
             }
             catch (Exception ex) { throw new Exception(ex.Message); }
             return Product;
@@ -112,7 +126,7 @@ namespace DataAccess
         public IEnumerable<Product> SearchProduct(string proname)
         {
             using var context = new InteriorProductManagementContext();
-            return context.Products.Where(Product => Product.ProductName.ToLower() == proname.ToLower()).ToList();// Same but with product name instead
+            return context.Products.Where(Product => Product.ProductName.ToLower().Contains(proname.ToLower())).ToList();// Same but with product name instead
         }     
     }
 }

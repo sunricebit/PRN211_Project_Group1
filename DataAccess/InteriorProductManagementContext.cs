@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace PRN211_Project_Group1.DataAccess;
 
@@ -26,18 +25,14 @@ public partial class InteriorProductManagementContext : DbContext
 
     public virtual DbSet<Provider> Providers { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-        var builder = new ConfigurationBuilder()
-                              .SetBasePath(Directory.GetCurrentDirectory())
-                              .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        IConfigurationRoot configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyCnn"));
-    }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("server=DESKTOP-D5TKL8U\\SQLEXPRESS;database=Interior_Product_Management;uid=sa;pwd=123;TrustServerCertificate=true;Integrated Security = true");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC07BD6AD021");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC072DE90E13");
 
             entity.ToTable("Account");
 
@@ -53,7 +48,7 @@ public partial class InteriorProductManagementContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC07A3BEDFC5");
+            entity.HasKey(e => e.Id).HasName("PK__Category__3214EC070475A6F0");
 
             entity.ToTable("Category");
 
@@ -62,7 +57,7 @@ public partial class InteriorProductManagementContext : DbContext
 
         modelBuilder.Entity<History>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__History__3214EC072E35A23D");
+            entity.HasKey(e => e.Id).HasName("PK__History__3214EC0790B448F2");
 
             entity.ToTable("History");
 
@@ -73,12 +68,12 @@ public partial class InteriorProductManagementContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.Histories)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__History__Product__2E1BDC42");
+                .HasConstraintName("FK__History__Product__3F466844");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC07090654F4");
+            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC0736FF6B33");
 
             entity.ToTable("Product");
 
@@ -88,16 +83,16 @@ public partial class InteriorProductManagementContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Product__Categor__286302EC");
+                .HasConstraintName("FK__Product__Categor__403A8C7D");
 
             entity.HasOne(d => d.Provider).WithMany(p => p.Products)
                 .HasForeignKey(d => d.ProviderId)
-                .HasConstraintName("FK__Product__Provide__29572725");
+                .HasConstraintName("FK__Product__Provide__412EB0B6");
         });
 
         modelBuilder.Entity<Provider>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Provider__3214EC07A0077C8C");
+            entity.HasKey(e => e.Id).HasName("PK__Provider__3214EC071796A2F8");
 
             entity.ToTable("Provider");
 

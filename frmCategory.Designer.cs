@@ -28,73 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnClose = new Button();
-            btnSave = new Button();
-            txtName = new TextBox();
-            label2 = new Label();
-            SuspendLayout();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // btnClose
             // 
-            btnClose.BackColor = SystemColors.Control;
-            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose.ForeColor = SystemColors.ActiveCaptionText;
-            btnClose.Location = new Point(244, 88);
-            btnClose.Margin = new Padding(3, 2, 3, 2);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(82, 22);
-            btnClose.TabIndex = 34;
-            btnClose.Text = "CLOSE";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.Location = new System.Drawing.Point(244, 88);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(82, 22);
+            this.btnClose.TabIndex = 34;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
-            btnSave.BackColor = SystemColors.Control;
-            btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSave.ForeColor = SystemColors.ActiveCaptionText;
-            btnSave.Location = new Point(120, 88);
-            btnSave.Margin = new Padding(3, 2, 3, 2);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(82, 22);
-            btnSave.TabIndex = 33;
-            btnSave.Text = "SAVE";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSave.Location = new System.Drawing.Point(120, 88);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(82, 22);
+            this.btnSave.TabIndex = 33;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtName
             // 
-            txtName.Location = new Point(120, 40);
-            txtName.Margin = new Padding(3, 2, 3, 2);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(206, 23);
-            txtName.TabIndex = 30;
+            this.txtName.Location = new System.Drawing.Point(120, 40);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(206, 23);
+            this.txtName.TabIndex = 30;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(22, 43);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 15);
-            label2.TabIndex = 26;
-            label2.Text = "Category Name:";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(22, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Category Name:";
             // 
             // frmCategory
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(349, 161);
-            Controls.Add(btnClose);
-            Controls.Add(btnSave);
-            Controls.Add(txtName);
-            Controls.Add(label2);
-            Name = "frmCategory";
-            Text = "Category";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(349, 161);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label2);
+            this.Name = "frmCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Category";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
