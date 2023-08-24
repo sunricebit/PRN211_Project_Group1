@@ -206,7 +206,6 @@
             Name = "frmAccount";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Account";
-            Load += frmAccount_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -28,443 +28,488 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            btnUpdate = new Button();
-            txtPassword = new TextBox();
-            Price = new Label();
-            txtUsername = new TextBox();
-            label4 = new Label();
-            txtPhone = new TextBox();
-            label3 = new Label();
-            txtFullname = new TextBox();
-            label2 = new Label();
-            btnLoad = new Button();
-            txtSearch = new TextBox();
-            btnSearch = new Button();
-            btnDelete = new Button();
-            btnAdd = new Button();
-            dgvAccount = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            usernameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            fullNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            phoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            roleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            accountBindingSource = new BindingSource(components);
-            txtEmail = new TextBox();
-            label1 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            rbID = new RadioButton();
-            rbUserName = new RadioButton();
-            rbFullname = new RadioButton();
-            cboId = new ComboBox();
-            cboRole = new ComboBox();
-            accountBindingSource1 = new BindingSource(components);
-            groupBox1 = new GroupBox();
-            cboSelectRole = new ComboBox();
-            grFilter = new GroupBox();
-            groupBox3 = new GroupBox();
-            btnClose = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvAccount).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)accountBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)accountBindingSource1).BeginInit();
-            groupBox1.SuspendLayout();
-            grFilter.SuspendLayout();
-            groupBox3.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.Price = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFullname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rbID = new System.Windows.Forms.RadioButton();
+            this.rbUserName = new System.Windows.Forms.RadioButton();
+            this.rbFullname = new System.Windows.Forms.RadioButton();
+            this.cboId = new System.Windows.Forms.ComboBox();
+            this.cboRole = new System.Windows.Forms.ComboBox();
+            this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Account = new System.Windows.Forms.GroupBox();
+            this.cboSelectRole = new System.Windows.Forms.ComboBox();
+            this.grFilter = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).BeginInit();
+            this.Account.SuspendLayout();
+            this.grFilter.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(699, 50);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(22, 23);
-            btnUpdate.TabIndex = 54;
-            btnUpdate.Text = "⇧";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            this.btnUpdate.Location = new System.Drawing.Point(799, 67);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(25, 31);
+            this.btnUpdate.TabIndex = 54;
+            this.btnUpdate.Text = "⇧";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(89, 53);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(100, 23);
-            txtPassword.TabIndex = 53;
+            this.txtPassword.Location = new System.Drawing.Point(102, 71);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(114, 27);
+            this.txtPassword.TabIndex = 53;
             // 
             // Price
             // 
-            Price.AutoSize = true;
-            Price.BackColor = Color.Transparent;
-            Price.Location = new Point(13, 57);
-            Price.Name = "Price";
-            Price.Size = new Size(57, 15);
-            Price.TabIndex = 52;
-            Price.Text = "Password";
+            this.Price.AutoSize = true;
+            this.Price.BackColor = System.Drawing.Color.Transparent;
+            this.Price.Location = new System.Drawing.Point(15, 76);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(70, 20);
+            this.Price.TabIndex = 52;
+            this.Price.Text = "Password";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(89, 21);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(100, 23);
-            txtUsername.TabIndex = 51;
+            this.txtUsername.Location = new System.Drawing.Point(102, 28);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(114, 27);
+            this.txtUsername.TabIndex = 51;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Location = new Point(13, 24);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 15);
-            label4.TabIndex = 50;
-            label4.Text = "Username";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(15, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Username";
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(278, 53);
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(145, 23);
-            txtPhone.TabIndex = 49;
+            this.txtPhone.Location = new System.Drawing.Point(318, 71);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(165, 27);
+            this.txtPhone.TabIndex = 49;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Location = new Point(215, 56);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 15);
-            label3.TabIndex = 48;
-            label3.Text = "Phone";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(246, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Phone";
             // 
             // txtFullname
             // 
-            txtFullname.Location = new Point(278, 21);
-            txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(145, 23);
-            txtFullname.TabIndex = 47;
+            this.txtFullname.Location = new System.Drawing.Point(318, 28);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(165, 27);
+            this.txtFullname.TabIndex = 47;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Location = new Point(215, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 15);
-            label2.TabIndex = 46;
-            label2.Text = "Fullname";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(246, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Fullname";
             // 
-            // btnLoad
+            // btnReset
             // 
-            btnLoad.Location = new Point(756, 21);
-            btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(22, 23);
-            btnLoad.TabIndex = 45;
-            btnLoad.Text = "↻";
-            btnLoad.UseVisualStyleBackColor = true;
-            btnLoad.Click += btnLoad_Click;
+            this.btnReset.Location = new System.Drawing.Point(864, 28);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(25, 31);
+            this.btnReset.TabIndex = 45;
+            this.btnReset.Text = "↻";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(31, 15);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(522, 23);
-            txtSearch.TabIndex = 44;
+            this.txtSearch.Location = new System.Drawing.Point(35, 20);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(596, 27);
+            this.txtSearch.TabIndex = 44;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(16, 96);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(22, 23);
-            btnSearch.TabIndex = 43;
-            btnSearch.Text = "🔎";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            this.btnSearch.Location = new System.Drawing.Point(18, 128);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(25, 31);
+            this.btnSearch.TabIndex = 43;
+            this.btnSearch.Text = "🔎";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(671, 50);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(22, 23);
-            btnDelete.TabIndex = 40;
-            btnDelete.Text = "-";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
+            this.btnDelete.Location = new System.Drawing.Point(767, 67);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(25, 31);
+            this.btnDelete.TabIndex = 40;
+            this.btnDelete.Text = "-";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(643, 50);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(22, 23);
-            btnAdd.TabIndex = 39;
-            btnAdd.Text = "+";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            this.btnAdd.Location = new System.Drawing.Point(735, 67);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(25, 31);
+            this.btnAdd.TabIndex = 39;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvAccount
             // 
-            dgvAccount.AllowUserToAddRows = false;
-            dgvAccount.AllowUserToDeleteRows = false;
-            dgvAccount.AutoGenerateColumns = false;
-            dgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAccount.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, usernameDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn, fullNameDataGridViewTextBoxColumn, phoneDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, roleDataGridViewTextBoxColumn });
-            dgvAccount.DataSource = accountBindingSource;
-            dgvAccount.Location = new Point(12, 170);
-            dgvAccount.Name = "dgvAccount";
-            dgvAccount.ReadOnly = true;
-            dgvAccount.RowHeadersWidth = 51;
-            dgvAccount.RowTemplate.Height = 25;
-            dgvAccount.Size = new Size(772, 254);
-            dgvAccount.TabIndex = 38;
+            this.dgvAccount.AllowUserToAddRows = false;
+            this.dgvAccount.AllowUserToDeleteRows = false;
+            this.dgvAccount.AutoGenerateColumns = false;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.roleDataGridViewTextBoxColumn});
+            this.dgvAccount.DataSource = this.accountBindingSource;
+            this.dgvAccount.Location = new System.Drawing.Point(14, 227);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.ReadOnly = true;
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.RowTemplate.Height = 25;
+            this.dgvAccount.Size = new System.Drawing.Size(882, 339);
+            this.dgvAccount.TabIndex = 38;
             // 
             // idDataGridViewTextBoxColumn
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
-            usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
-            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
             // 
             // fullNameDataGridViewTextBoxColumn
             // 
-            fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
-            phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn.Width = 125;
             // 
             // emailDataGridViewTextBoxColumn
             // 
-            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
             // 
             // roleDataGridViewTextBoxColumn
             // 
-            roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            roleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleDataGridViewTextBoxColumn.Width = 125;
             // 
             // accountBindingSource
             // 
-            accountBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Account);
+            this.accountBindingSource.DataSource = typeof(PRN211_Project_Group1.DataAccess.Account);
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(473, 17);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(145, 23);
-            txtEmail.TabIndex = 58;
+            this.txtEmail.Location = new System.Drawing.Point(541, 23);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(165, 27);
+            this.txtEmail.TabIndex = 58;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Location = new Point(431, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(36, 15);
-            label1.TabIndex = 57;
-            label1.Text = "Email";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(493, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Email";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Location = new Point(449, 57);
-            label5.Name = "label5";
-            label5.Size = new Size(30, 15);
-            label5.TabIndex = 59;
-            label5.Text = "Role";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(513, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 20);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Role";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Location = new Point(643, 21);
-            label6.Name = "label6";
-            label6.Size = new Size(18, 15);
-            label6.TabIndex = 61;
-            label6.Text = "ID";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(735, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 20);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "ID";
             // 
             // rbID
             // 
-            rbID.AutoSize = true;
-            rbID.Checked = true;
-            rbID.Location = new Point(22, 126);
-            rbID.Name = "rbID";
-            rbID.Size = new Size(35, 19);
-            rbID.TabIndex = 63;
-            rbID.TabStop = true;
-            rbID.Text = "Id";
-            rbID.UseVisualStyleBackColor = true;
+            this.rbID.AutoSize = true;
+            this.rbID.Checked = true;
+            this.rbID.Location = new System.Drawing.Point(25, 168);
+            this.rbID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbID.Name = "rbID";
+            this.rbID.Size = new System.Drawing.Size(43, 24);
+            this.rbID.TabIndex = 63;
+            this.rbID.TabStop = true;
+            this.rbID.Text = "Id";
+            this.rbID.UseVisualStyleBackColor = true;
             // 
             // rbUserName
             // 
-            rbUserName.AutoSize = true;
-            rbUserName.Location = new Point(82, 126);
-            rbUserName.Name = "rbUserName";
-            rbUserName.Size = new Size(78, 19);
-            rbUserName.TabIndex = 64;
-            rbUserName.Text = "Username";
-            rbUserName.UseVisualStyleBackColor = true;
+            this.rbUserName.AutoSize = true;
+            this.rbUserName.Location = new System.Drawing.Point(94, 168);
+            this.rbUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbUserName.Name = "rbUserName";
+            this.rbUserName.Size = new System.Drawing.Size(96, 24);
+            this.rbUserName.TabIndex = 64;
+            this.rbUserName.Text = "Username";
+            this.rbUserName.UseVisualStyleBackColor = true;
             // 
             // rbFullname
             // 
-            rbFullname.AutoSize = true;
-            rbFullname.Location = new Point(181, 126);
-            rbFullname.Name = "rbFullname";
-            rbFullname.Size = new Size(76, 19);
-            rbFullname.TabIndex = 65;
-            rbFullname.Text = "FullName";
-            rbFullname.UseVisualStyleBackColor = true;
+            this.rbFullname.AutoSize = true;
+            this.rbFullname.Location = new System.Drawing.Point(207, 168);
+            this.rbFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbFullname.Name = "rbFullname";
+            this.rbFullname.Size = new System.Drawing.Size(93, 24);
+            this.rbFullname.TabIndex = 65;
+            this.rbFullname.Text = "FullName";
+            this.rbFullname.UseVisualStyleBackColor = true;
             // 
             // cboId
             // 
-            cboId.DataSource = accountBindingSource;
-            cboId.DisplayMember = "Id";
-            cboId.FormattingEnabled = true;
-            cboId.Location = new Point(671, 18);
-            cboId.Name = "cboId";
-            cboId.Size = new Size(50, 23);
-            cboId.TabIndex = 66;
-            cboId.ValueMember = "Id";
+            this.cboId.DataSource = this.accountBindingSource;
+            this.cboId.DisplayMember = "Id";
+            this.cboId.FormattingEnabled = true;
+            this.cboId.Location = new System.Drawing.Point(767, 24);
+            this.cboId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboId.Name = "cboId";
+            this.cboId.Size = new System.Drawing.Size(57, 28);
+            this.cboId.TabIndex = 66;
+            this.cboId.ValueMember = "Id";
+            this.cboId.SelectedIndexChanged += new System.EventHandler(this.cboId_SelectedIndexChanged);
             // 
             // cboRole
             // 
-            cboRole.DataSource = accountBindingSource1;
-            cboRole.DisplayMember = "Role";
-            cboRole.FormattingEnabled = true;
-            cboRole.Location = new Point(34, 22);
-            cboRole.Name = "cboRole";
-            cboRole.Size = new Size(121, 23);
-            cboRole.TabIndex = 67;
-            cboRole.ValueMember = "Role";
-            cboRole.SelectedIndexChanged += cboRole_SelectedIndexChanged;
+            this.cboRole.DataSource = this.accountBindingSource1;
+            this.cboRole.DisplayMember = "Role";
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.Location = new System.Drawing.Point(39, 29);
+            this.cboRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(138, 28);
+            this.cboRole.TabIndex = 67;
+            this.cboRole.ValueMember = "Role";
+            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
             // 
             // accountBindingSource1
             // 
-            accountBindingSource1.DataSource = typeof(PRN211_Project_Group1.DataAccess.Account);
+            this.accountBindingSource1.DataSource = typeof(PRN211_Project_Group1.DataAccess.Account);
             // 
-            // groupBox1
+            // Account
             // 
-            groupBox1.Controls.Add(cboSelectRole);
-            groupBox1.Controls.Add(cboId);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(txtEmail);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(btnAdd);
-            groupBox1.Controls.Add(btnUpdate);
-            groupBox1.Controls.Add(btnDelete);
-            groupBox1.Location = new Point(12, 3);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(738, 80);
-            groupBox1.TabIndex = 68;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            this.Account.Controls.Add(this.cboSelectRole);
+            this.Account.Controls.Add(this.cboId);
+            this.Account.Controls.Add(this.label1);
+            this.Account.Controls.Add(this.txtEmail);
+            this.Account.Controls.Add(this.label6);
+            this.Account.Controls.Add(this.btnAdd);
+            this.Account.Controls.Add(this.btnUpdate);
+            this.Account.Controls.Add(this.btnDelete);
+            this.Account.Location = new System.Drawing.Point(14, 4);
+            this.Account.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Account.Name = "Account";
+            this.Account.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Account.Size = new System.Drawing.Size(843, 107);
+            this.Account.TabIndex = 68;
+            this.Account.TabStop = false;
+            this.Account.Text = "Account";
             // 
             // cboSelectRole
             // 
-            cboSelectRole.DataSource = accountBindingSource1;
-            cboSelectRole.DisplayMember = "Role";
-            cboSelectRole.FormattingEnabled = true;
-            cboSelectRole.Location = new Point(473, 50);
-            cboSelectRole.Name = "cboSelectRole";
-            cboSelectRole.Size = new Size(145, 23);
-            cboSelectRole.TabIndex = 68;
-            cboSelectRole.ValueMember = "Role";
+            this.cboSelectRole.DataSource = this.accountBindingSource1;
+            this.cboSelectRole.DisplayMember = "Role";
+            this.cboSelectRole.FormattingEnabled = true;
+            this.cboSelectRole.Location = new System.Drawing.Point(541, 67);
+            this.cboSelectRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboSelectRole.Name = "cboSelectRole";
+            this.cboSelectRole.Size = new System.Drawing.Size(165, 28);
+            this.cboSelectRole.TabIndex = 68;
+            this.cboSelectRole.ValueMember = "Role";
             // 
             // grFilter
             // 
-            grFilter.Controls.Add(cboRole);
-            grFilter.Location = new Point(595, 83);
-            grFilter.Name = "grFilter";
-            grFilter.Size = new Size(183, 81);
-            grFilter.TabIndex = 69;
-            grFilter.TabStop = false;
-            grFilter.Text = "Filter by role";
+            this.grFilter.Controls.Add(this.cboRole);
+            this.grFilter.Location = new System.Drawing.Point(680, 111);
+            this.grFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grFilter.Name = "grFilter";
+            this.grFilter.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grFilter.Size = new System.Drawing.Size(209, 108);
+            this.grFilter.TabIndex = 69;
+            this.grFilter.TabStop = false;
+            this.grFilter.Text = "Filter by role";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(txtSearch);
-            groupBox3.Location = new Point(13, 82);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(570, 82);
-            groupBox3.TabIndex = 69;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Search";
+            this.groupBox3.Controls.Add(this.txtSearch);
+            this.groupBox3.Location = new System.Drawing.Point(15, 109);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(651, 109);
+            this.groupBox3.TabIndex = 69;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Search";
             // 
             // btnClose
             // 
-            btnClose.BackColor = SystemColors.Control;
-            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose.ForeColor = SystemColors.ActiveCaptionText;
-            btnClose.Location = new Point(357, 444);
-            btnClose.Margin = new Padding(3, 2, 3, 2);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(82, 22);
-            btnClose.TabIndex = 70;
-            btnClose.Text = "CLOSE";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.Location = new System.Drawing.Point(408, 592);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(94, 29);
+            this.btnClose.TabIndex = 70;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // frmAccountManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(796, 477);
-            Controls.Add(btnClose);
-            Controls.Add(rbFullname);
-            Controls.Add(rbUserName);
-            Controls.Add(rbID);
-            Controls.Add(label5);
-            Controls.Add(txtPassword);
-            Controls.Add(Price);
-            Controls.Add(txtUsername);
-            Controls.Add(label4);
-            Controls.Add(txtPhone);
-            Controls.Add(label3);
-            Controls.Add(txtFullname);
-            Controls.Add(label2);
-            Controls.Add(btnLoad);
-            Controls.Add(btnSearch);
-            Controls.Add(dgvAccount);
-            Controls.Add(groupBox3);
-            Controls.Add(grFilter);
-            Controls.Add(groupBox1);
-            Name = "frmAccountManagement";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Account Management";
-            Load += frmAccountManagement_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvAccount).EndInit();
-            ((System.ComponentModel.ISupportInitialize)accountBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)accountBindingSource1).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            grFilter.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(910, 636);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.rbFullname);
+            this.Controls.Add(this.rbUserName);
+            this.Controls.Add(this.rbID);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.Price);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtFullname);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.dgvAccount);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.grFilter);
+            this.Controls.Add(this.Account);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "frmAccountManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Account Management";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).EndInit();
+            this.Account.ResumeLayout(false);
+            this.Account.PerformLayout();
+            this.grFilter.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -477,7 +522,7 @@
         private Label label3;
         private TextBox txtFullname;
         private Label label2;
-        private Button btnLoad;
+        private Button btnReset;
         private TextBox txtSearch;
         private Button btnSearch;
         private Button btnDelete;
@@ -500,7 +545,7 @@
         private RadioButton rbFullname;
         private ComboBox cboId;
         private ComboBox cboRole;
-        private GroupBox groupBox1;
+        private GroupBox Account;
         private GroupBox grFilter;
         private GroupBox groupBox3;
         private BindingSource accountBindingSource1;

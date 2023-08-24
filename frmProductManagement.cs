@@ -4,17 +4,8 @@ using OfficeOpenXml.Style;
 using PRN211_Project_Group1;
 using PRN211_Project_Group1.DataAccess;
 using Project;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace FurnitureWinApp
 {
@@ -62,46 +53,46 @@ namespace FurnitureWinApp
                 {
                     string selectedFilePath = saveFileDialog.FileName;
                     FileInfo file = new FileInfo(selectedFilePath);
-                    ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-                    var productsToExport = new List<ProductExport>()
-                    {
-                        new ProductExport
-                        {
-                            CategoryId = 1,
-                            Price =2,
-                            ProductName ="abc",
-                            ProviderId = 1,
-                            Quantity = 1
-                        },
-                        new ProductExport
-                        {
-                            CategoryId = 2,
-                            Price = 3,
-                            ProductName ="asda",
-                            ProviderId = 1,
-                            Quantity = 1
-                        },
-                        new ProductExport
-                        {
-                            CategoryId = 6,
-                            Price = 65,
-                            ProductName ="dasfe",
-                            ProviderId = 5,
-                            Quantity = 56
-                        },
-                    };
-                    //foreach (var item in (BindingList<Product>)dataGridView.DataSource)
+                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+                    var productsToExport = new List<ProductExport>();
                     //{
-                    //    ProductExport pe = new ProductExport()
+                    //    new ProductExport
                     //    {
-                    //        CategoryId = item.CategoryId.Value,
-                    //        Price = item.Price.Value,
-                    //        ProductName = item.ProductName,
-                    //        ProviderId = item.ProviderId.Value,
-                    //        Quantity = item.Quantity.Value,
-                    //    };
-                    //    productsToExport.Add(pe);
-                    //}
+                    //        CategoryId = 1,
+                    //        Price =2,
+                    //        ProductName ="abc",
+                    //        ProviderId = 1,
+                    //        Quantity = 1
+                    //    },
+                    //    new ProductExport
+                    //    {
+                    //        CategoryId = 2,
+                    //        Price = 3,
+                    //        ProductName ="asda",
+                    //        ProviderId = 1,
+                    //        Quantity = 1
+                    //    },
+                    //    new ProductExport
+                    //    {
+                    //        CategoryId = 6,
+                    //        Price = 65,
+                    //        ProductName ="dasfe",
+                    //        ProviderId = 5,
+                    //        Quantity = 56
+                    //    },
+                    //};
+                    foreach (var item in (BindingList<Product>)dataGridView.DataSource)
+                    {
+                        ProductExport pe = new ProductExport()
+                        {
+                            CategoryId = item.CategoryId.Value,
+                            Price = item.Price.Value,
+                            ProductName = item.ProductName,
+                            ProviderId = item.ProviderId.Value,
+                            Quantity = item.Quantity.Value,
+                        };
+                        productsToExport.Add(pe);
+                    }
                     SaveExcelFile(productsToExport, file);
                     MessageBox.Show("Tập tin Excel đã được lưu tại: " + selectedFilePath);
                 }
@@ -113,8 +104,8 @@ namespace FurnitureWinApp
             string selectedFilePath = String.Empty;
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\"; 
-                openFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx"; 
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx";
                 openFileDialog.FilterIndex = 1;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -123,19 +114,33 @@ namespace FurnitureWinApp
                     MessageBox.Show("Bạn đã chọn tập tin: " + selectedFilePath);
                 }
             }
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             FileInfo file = new FileInfo(selectedFilePath);
             List<ProductExport> productsToAdd = LoadExcelFile(file);
-            foreach(var product in productsToAdd)
+            foreach (var product in productsToAdd)
             {
-                Product p = new Product()
+                Product p = productRepository.GetProductList().FirstOrDefault(item => item.ProductName.Equals(product.ProductName));
+                if (p != null)
                 {
-                    CategoryId = product.CategoryId,
-                    Quantity = product.Quantity,
-                    ProductName = product.ProductName,
-                    Price = product.Price,
-                    ProviderId = product.ProviderId,
-                };
+                    p.CategoryId = product.CategoryId;
+                    p.Quantity = product.Quantity;
+                    p.ProductName = product.ProductName;
+                    p.Price = product.Price;
+                    p.ProviderId = product.ProviderId;
+                    productRepository.UpdateProduct(p);
+                }
+                else
+                {
+                    p = new Product()
+                    {
+                        CategoryId = product.CategoryId,
+                        Quantity = product.Quantity,
+                        ProductName = product.ProductName,
+                        Price = product.Price,
+                        ProviderId = product.ProviderId,
+                    };
+                }
+
                 productRepository.AddProduct(p);
             }
         }
@@ -179,19 +184,27 @@ namespace FurnitureWinApp
             int columnCount = 1;
             int rowCount = 2;
 
-            while (string.IsNullOrWhiteSpace(ws.Cells[rowCount, columnCount].Value?.ToString()) == false)
+            try
             {
-                ProductExport pe = new ProductExport
+                while (string.IsNullOrWhiteSpace(ws.Cells[rowCount, columnCount].Value?.ToString()) == false)
                 {
-                    ProductName = ws.Cells[rowCount, columnCount].Value.ToString(),
-                    Quantity = int.Parse(ws.Cells[rowCount, columnCount + 1].Value.ToString()),
-                    Price = double.Parse(ws.Cells[rowCount, columnCount + 2].Value.ToString()),
-                    ProviderId = int.Parse(ws.Cells[rowCount, columnCount + 3].Value.ToString()),
-                    CategoryId = int.Parse(ws.Cells[rowCount, columnCount + 4].Value.ToString()),
-                };
-                rowCount++;
-                products.Add(pe);
+                    ProductExport pe = new ProductExport
+                    {
+                        ProductName = ws.Cells[rowCount, columnCount].Value.ToString(),
+                        Quantity = int.Parse(ws.Cells[rowCount, columnCount + 1].Value.ToString()),
+                        Price = double.Parse(ws.Cells[rowCount, columnCount + 2].Value.ToString()),
+                        ProviderId = int.Parse(ws.Cells[rowCount, columnCount + 3].Value.ToString()),
+                        CategoryId = int.Parse(ws.Cells[rowCount, columnCount + 4].Value.ToString()),
+                    };
+                    rowCount++;
+                    products.Add(pe);
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
             return products;
         }
 
@@ -294,7 +307,7 @@ namespace FurnitureWinApp
                     historyRepository.AddHistory(history);
                     productRepository.RemoveProduct(p.Id);
                     MessageBox.Show("Delete success!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                     LoadProduct();
                     LoadList();
                 }
