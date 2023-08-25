@@ -13,8 +13,8 @@ namespace PRN211_Project_Group1
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new frmLogin());
-            Application.Run(new frmProductManagement(new DataAccess.Account()
+            Application.Run(new frmLogin());
+            /*Application.Run(new frmProductManagement(new DataAccess.Account()
             {
                 Email = "abc",
                 FullName = "abc",
@@ -23,7 +23,7 @@ namespace PRN211_Project_Group1
                 Phone = "1230",
                 Role = "Manager",
                 Username = "abc"
-            }, new frmLogin()));
+            }, new frmLogin()));*/
         }
     }
 }

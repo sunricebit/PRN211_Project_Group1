@@ -81,7 +81,7 @@ namespace FurnitureWinApp
                     //        Quantity = 56
                     //    },
                     //};
-                    foreach (var item in (BindingList<Product>)dataGridView.DataSource)
+                    foreach (var item in ((BindingSource)dataGridView.DataSource).List as List<Product>)
                     {
                         ProductExport pe = new ProductExport()
                         {
@@ -94,7 +94,7 @@ namespace FurnitureWinApp
                         productsToExport.Add(pe);
                     }
                     SaveExcelFile(productsToExport, file);
-                    MessageBox.Show("Tập tin Excel đã được lưu tại: " + selectedFilePath);
+                    MessageBox.Show("File successfully exported to: " + selectedFilePath);
                 }
             }
         }
@@ -111,7 +111,7 @@ namespace FurnitureWinApp
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedFilePath = openFileDialog.FileName;
-                    MessageBox.Show("Bạn đã chọn tập tin: " + selectedFilePath);
+                    MessageBox.Show("File chosen: " + selectedFilePath);
                 }
             }
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
