@@ -123,13 +123,18 @@ namespace FurnitureWinApp
                 MessageBox.Show($"An error occured! ({ex.Message})", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void formclosed(object sender, FormClosedEventArgs e)
+        {
+            LoadProduct();
+            LoadList();
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 frmProduct form = new frmProduct();
                 form.Show();
-                LoadProduct();
+                form.FormClosed += new FormClosedEventHandler(formclosed);
             }
             catch (Exception ex) { MessageBox.Show($"Error: {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
