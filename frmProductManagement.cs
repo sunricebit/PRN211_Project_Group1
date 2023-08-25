@@ -55,33 +55,9 @@ namespace FurnitureWinApp
                     FileInfo file = new FileInfo(selectedFilePath);
                     ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
                     var productsToExport = new List<ProductExport>();
-                    //{
-                    //    new ProductExport
-                    //    {
-                    //        CategoryId = 1,
-                    //        Price =2,
-                    //        ProductName ="abc",
-                    //        ProviderId = 1,
-                    //        Quantity = 1
-                    //    },
-                    //    new ProductExport
-                    //    {
-                    //        CategoryId = 2,
-                    //        Price = 3,
-                    //        ProductName ="asda",
-                    //        ProviderId = 1,
-                    //        Quantity = 1
-                    //    },
-                    //    new ProductExport
-                    //    {
-                    //        CategoryId = 6,
-                    //        Price = 65,
-                    //        ProductName ="dasfe",
-                    //        ProviderId = 5,
-                    //        Quantity = 56
-                    //    },
-                    //};
-                    foreach (var item in ((BindingSource)dataGridView.DataSource).List as List<Product>)
+                    
+                    IEnumerable<Product> proLst = (List<Product>) dataGridView.DataSource;
+                    foreach (var item in proLst)
                     {
                         ProductExport pe = new ProductExport()
                         {
@@ -362,9 +338,7 @@ namespace FurnitureWinApp
             var products = productRepository.GetProductList();
             try
             {
-                source.DataSource = products;
-                dataGridView.DataSource = null;
-                dataGridView.DataSource = source;
+                dataGridView.DataSource = products;
                 cboProductID.DataSource = null;
                 cboProductID.DataSource = products.Where(p => p.Id != null).ToList();
                 cboProductID.DisplayMember = "Id";
