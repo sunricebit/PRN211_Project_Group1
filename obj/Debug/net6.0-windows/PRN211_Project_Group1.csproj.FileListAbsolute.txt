@@ -54,7 +54,6 @@ D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.D
 D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.csproj.AssemblyReference.cache
-D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.Form1.resources
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.csproj.GenerateResource.cache
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.GeneratedMSBuildEditorConfig.editorconfig
 D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.AssemblyInfoInputs.cache
@@ -250,6 +249,7 @@ D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+<<<<<<< Updated upstream
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\PRN211_Project_Group1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
@@ -275,3 +275,23 @@ D:\PRN211_Project_Group1\obj\Debug\net6.0-windows\refint\PRN211_Project_Group1.d
 D:\PRN211_Project_Group1\obj\Debug\net6.0-windows\PRN211_Project_Group1.pdb
 D:\PRN211_Project_Group1\obj\Debug\net6.0-windows\PRN211_Project_Group1.genruntimeconfig.cache
 D:\PRN211_Project_Group1\obj\Debug\net6.0-windows\ref\PRN211_Project_Group1.dll
+=======
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\EPPlus.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\PRN211\AS_PRN211\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\FurnitureWinApp.frmAccount.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\FurnitureWinApp.frmAccountManagement.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\FurnitureWinApp.frmCategory.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\FurnitureWinApp.frmCategoryManagement.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\Project.frmHistory.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.frmLogin.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\Project.frmProduct.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\FurnitureWinApp.frmProductManagement.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\Project.frmProvider.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\Project.frmProviderManagement.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\PRN211_Project_Group1.Main.resources
+D:\PRN211\AS_PRN211\obj\Debug\net6.0-windows\NES_Store.ResetPassword.resources
+>>>>>>> Stashed changes
